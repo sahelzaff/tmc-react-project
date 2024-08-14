@@ -1,7 +1,8 @@
 
 import React from 'react';
 import './Components.css';
-import assets from '../assets/assets';
+import assets from '../../public/assets/assets';
+
 
 const About_Company_Homepage = () => {
     return (
