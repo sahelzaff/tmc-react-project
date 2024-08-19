@@ -1,6 +1,6 @@
 import React from "react";
 import assets from '../../public/assets/assets';
-import { FaLinkedin, FaYoutube, FaWhatsapp, FaInstagram, FaPhone, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaYoutube, FaWhatsapp, FaInstagram, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 import GoogleMap from "./GoogleMap";
 import GoogleMapFooter from "./GoogleMapFooter";
 
@@ -39,15 +39,15 @@ const Footer = () => {
                 <div className="w-full md:w-1/4 mb-8 md:mb-0">
                     <h3 className="font-semibold mb-4">Products & Services</h3>
                     <ul className="text-gray-400">
-                        <li className="cursor-pointer">Automation</li>
-                        <li className="cursor-pointer">Forging Shop & Mass Heating Equipment</li>
-                        <li className="cursor-pointer">Foundry Melt Shop Equipment</li>
-                        <li className="cursor-pointer">Heat Treatment & Special Applications</li>
-                        <li className="cursor-pointer">Pipes & Tubes – Heating, Welding</li>
-                        <li className="cursor-pointer">Power Distribution Equipment</li>
-                        <li className="cursor-pointer">Solid State Power Supplies</li>
-                        <li className="cursor-pointer">Steel Melt Shop Equipment</li>
-                        <li className="cursor-pointer">Turnkey Solutions</li>
+                        <li className="cursor-pointer hover:text-gray-200">Automation</li>
+                        <li className="cursor-pointer hover:text-gray-200">Forging Shop & Mass Heating Equipment</li>
+                        <li className="cursor-pointer hover:text-gray-200">Foundry Melt Shop Equipment</li>
+                        <li className="cursor-pointer hover:text-gray-200">Heat Treatment & Special Applications</li>
+                        <li className="cursor-pointer hover:text-gray-200">Pipes & Tubes – Heating, Welding</li>
+                        <li className="cursor-pointer hover:text-gray-200">Power Distribution Equipment</li>
+                        <li className="cursor-pointer hover:text-gray-200">Solid State Power Supplies</li>
+                        <li className="cursor-pointer hover:text-gray-200">Steel Melt Shop Equipment</li>
+                        <li className="cursor-pointer hover:text-gray-200">Turnkey Solutions</li>
                     </ul>
                 </div>
 
@@ -55,16 +55,16 @@ const Footer = () => {
                 <div className="w-full md:w-1/4 mb-8 md:mb-0">
                     <h3 className="font-semibold mb-4">Useful Links</h3>
                     <ul className="text-gray-400">
-                        <li className="cursor-pointer">Home</li>
-                        <li className="cursor-pointer">Our Clients</li>
-                        <li className="cursor-pointer">News & Events</li>
-                        <li className="cursor-pointer">Download Brochure</li>
-                        <li className="cursor-pointer">Contact</li>
-                        <li className="cursor-pointer">About Us</li>
-                        <li className="cursor-pointer">Investors</li>
-                        <li className="cursor-pointer">CSR</li>
-                        <li className="cursor-pointer">Careers</li>
-                        <li className="cursor-pointer">Terms & Conditions</li>
+                        <li className="cursor-pointer hover:text-gray-200">Home</li>
+                        <li className="cursor-pointer hover:text-gray-200">Our Clients</li>
+                        <li className="cursor-pointer hover:text-gray-200">News & Events</li>
+                        <li className="cursor-pointer hover:text-gray-200">Download Brochure</li>
+                        <li className="cursor-pointer hover:text-gray-200">Contact</li>
+                        <li className="cursor-pointer hover:text-gray-200">About Us</li>
+                        <li className="cursor-pointer hover:text-gray-200">Investors</li>
+                        <li className="cursor-pointer hover:text-gray-200">CSR</li>
+                        <li className="cursor-pointer hover:text-gray-200">Careers</li>
+                        <li className="cursor-pointer hover:text-gray-200">Terms & Conditions</li>
                     </ul>
                 </div>
 
@@ -89,7 +89,7 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="flex items-center bg-[#d21317] p-4 rounded mr-4 mb-4 cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out" >
-                            <FaPhone className="h-6 w-6 text-white mr-2" />
+                            <FaPhoneAlt className="h-6 w-6 text-white mr-2" />
                             <div>
                                 <p className="text-white">+91 98XXX XXXXX</p>
                                 <p className="text-sm text-gray-300">Call Us Now</p>
