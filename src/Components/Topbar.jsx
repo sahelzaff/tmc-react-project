@@ -6,7 +6,7 @@ import './Components.css'
 const Topbar = () => {
     return (
         <div className='w-full'>
-            <div class="colored-div h-11 flex items-center">
+            <div className="colored-div h-11 flex items-center">
                 <div className='flex flex-row items-center justify-between w-full'>
                     <div className='flex gap-5 pl-20'>
                         <div className='flex justify-center items-center gap-2 cursor-pointer'>
