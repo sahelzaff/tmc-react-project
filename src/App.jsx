@@ -1,26 +1,17 @@
 import React from 'react'
-import Topbar from './Components/Topbar'
-import Navbar from './Components/Navbar'
-import Hero_Homepage from './Components/Hero_Homepage'
-import About_Company_Homepage from './Components/About_Company_Homepage'
-import Products from './Components/Products'
-import Services from './Components/Services'
-import Testimonial from './Components/Testimonial'
-import ContactHome from './Components/ContactHome'
-import Footer from './Components/Footer'
+import { Routes, Route } from 'react-router-dom';
+import Homepage from './pages/Homepage'
+import Products from './pages/Products';
 
 const App = () => {
   return (
     <>
-    <Topbar/>
-    <Navbar/>
-    <Hero_Homepage/>
-    <About_Company_Homepage/>
-    <Products/>
-    <Services/>
-    <Testimonial/>
-    <ContactHome/>
-    <Footer/>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/products" element={<Products/>} />
+        
+      </Routes>
+     
     </>
   )
 }

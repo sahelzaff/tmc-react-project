@@ -9,7 +9,7 @@ const About_Company_Homepage = () => {
         <div className="w-1/2 flex items-center justify-center">
           <div className="grid grid-rows-3 grid-cols-3 gap-2 w-[450px] h-auto">
             <div className="col-span-3 row-span-2 relative group cursor-pointer" data-aos='zoom-in' data-aos-duration="1000" data-aos-once="true" >
-              <img src={assets.aboutcompany1} alt="aboutcompany1" />
+              <img src={assets.Major_Equipments} alt="aboutcompany1" />
               <img
                 src={assets.play_button}
                 alt="play_button"
@@ -17,7 +17,7 @@ const About_Company_Homepage = () => {
               />
             </div>
             <div className="col-span-1 relative group cursor-pointer"  data-aos='fade-up' data-aos-duration="1000" data-aos-once="true" data-aos-delay="300">
-              <img src={assets.aboutcompany2} alt="aboutcompany2" />
+              <img src={assets.Operational_Power_Pack} alt="aboutcompany2" />
               <img
                 src={assets.play_button}
                 alt="play_button"
@@ -25,7 +25,7 @@ const About_Company_Homepage = () => {
               />
             </div>
             <div className="col-span-1 relative group cursor-pointer" data-aos='fade-up' data-aos-duration="1000" data-aos-once="true" data-aos-delay="300">
-              <img src={assets.aboutcompany3} alt="aboutcompany3" />
+              <img src={assets.CCM_Major_Equipments} alt="aboutcompany3" />
               <img
                 src={assets.play_button}
                 alt="play_button"
@@ -33,7 +33,7 @@ const About_Company_Homepage = () => {
               />
             </div>
             <div className="col-span-1 relative group cursor-pointer" data-aos='fade-up' data-aos-duration="1000" data-aos-once="true" data-aos-delay="300">
-              <img src={assets.aboutcompany4} alt="aboutcompany4" />
+              <img src={assets.Ladle_and_Bell_Alarm} alt="aboutcompany4" />
               <img
                 src={assets.play_button}
                 alt="play_button"

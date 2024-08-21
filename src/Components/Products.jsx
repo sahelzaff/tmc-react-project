@@ -25,7 +25,7 @@ const Products = () => {
       <div className="pb-20">
         <div className="flex flex-row items-center justify-center gap-20">
           <div className="bg-white flex flex-col items-center justify-center w-[350px] h-auto p-4 rounded-lg shadow-lg" data-aos='fade-left' data-aos-duration="1000" data-aos-once="true"  data-aos-delay="500">
-            <img src={assets.product1} alt="" className="w-[400px]" srcset="" />
+            <img src={assets.Machinery} alt="" className="w-[400px] pb-4" srcset="" />
             <h2 className="font-bold font-roboto text-tmc-red text-2xl py-4">
               Machinery
             </h2>
@@ -41,7 +41,7 @@ const Products = () => {
             </button>
           </div>
           <div className="bg-white flex flex-col items-center justify-center w-[350px] h-auto p-4 rounded-lg shadow-lg" data-aos='zoom-in' data-aos-duration="700" data-aos-once="true" >
-            <img src={assets.product2} alt="" className="w-[400px]" srcset="" />
+            <img src={assets.Major_Equipments} alt="" className="w-[400px] pb-4" srcset="" />
             <h2 className="font-bold font-roboto text-tmc-red text-2xl py-4">
               {" "}
               Major Equipments
@@ -58,7 +58,7 @@ const Products = () => {
             </button>
           </div>
           <div className="bg-white flex flex-col items-center justify-center w-[350px] h-auto p-4 rounded-lg shadow-lg" data-aos='fade-right' data-aos-duration="1000" data-aos-once="true" data-aos-delay="500" >
-            <img src={assets.product3} alt="" className="w-[400px]" srcset="" />
+            <img src={assets.Billets} alt="" className="w-[400px] pb-4" srcset="" />
             <h2 className="font-bold font-roboto text-tmc-red text-2xl py-4 text-center">
               Billets, Blooms, Rounds
             </h2>

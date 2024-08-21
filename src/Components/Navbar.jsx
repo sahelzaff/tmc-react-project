@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import assets from '../../public/assets/assets';
 import './Components.css'
 
@@ -11,13 +12,15 @@ const Navbar = () => {
         <div className='w-full'>
             <div className='flex flex-row justify-between items-center '>
                 <div>
-                    <img src={assets.Technomelt_logo_01} alt="Technomelt Logo" loading='lazy' className='w-[380px]' srcset="" />
+                    <Link to="/">
+                        <img src={assets.Technomelt_logo_01} alt="Technomelt Logo" loading='lazy' className='w-[380px]' srcset="" />
+                    </Link>
                 </div>
                 <div>
                     <ul className='flex flex-row items-center justify-center gap-5'>
-                        <li className='nav-item'>HOME</li>
+                        <li className='nav-item'><Link to="/">HOME</Link></li>
                         <li className='nav-item'>EXPLORE US</li>
-                        <li className='nav-item'>PRODUCTS & SERVICES</li>
+                        <li className='nav-item'><Link to="/products">PRODUCTS & SERVICES</Link></li>
                         <li className='nav-item'>CLIENTS STORY</li>
                         <li className='nav-item'>FAQ</li>
                         <li className='nav-item'>BLOG</li>

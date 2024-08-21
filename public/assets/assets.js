@@ -36,5 +36,13 @@ const assets = {
     service5: '/assets/service5.jpg',
     quote_red: '/assets/quote_red.svg',
     profile: '/assets/profile.svg',
+    Major_Equipments: '/assets/Major_Equipments.png',
+    Technical_Consultant: '/assets/Technical_Consultant.png',
+    Tundish: '/assets/Tundish.png',
+    Machinery: '/assets/Machinery.png',
+    Operational_Power_Pack: '/assets/Operational_Power_Pack.png',
+    CCM_Major_Equipments: '/assets/CCM_Major_Equipments.png',
+    Ladle_and_Bell_Alarm: '/assets/Ladle_and_Bell_Alarm.png',
+    Billets: '/assets/Billets.png',
 };
 export default assets;
