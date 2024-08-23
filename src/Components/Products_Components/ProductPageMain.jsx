@@ -2,11 +2,14 @@ import React, { useState, useRef } from 'react';
 import FilterSidebar from './FilterSidebar';
 import ProductGrid from './ProductGrid';
 import Pagination from './Pagination';
+import Inquire_Modal from './Inquire_Modal';
 import { products, categories } from './productData';
 
 const ProductPageMain = () => {
     const [selectedFilters, setSelectedFilters] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedProduct, setSelectedProduct] = useState(null);
     const productsPerPage = 9;
 
     // Create a reference for the component
@@ -43,6 +46,18 @@ const ProductPageMain = () => {
 
     const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
+    // Handle modal open
+    const handleInquireNowClick = (product) => {
+        setSelectedProduct(product);
+        setIsModalOpen(true);
+    };
+
+    // Handle form submission
+    const handleFormSubmit = (formData) => {
+        console.log("Form Submitted", formData);
+        // Perform any necessary actions here, such as sending the data to a backend server
+    };
+
     return (
         <div className="h-auto py-20 px-16 w-full" ref={productPageRef}>
             <div className="flex flex-col w-full pb-10">
@@ -64,7 +79,7 @@ const ProductPageMain = () => {
                     removeFilter={(filter) => setSelectedFilters(prev => prev.filter(f => f !== filter))}
                 />
                 <div className="w-3/4 p-4">
-                    <ProductGrid products={currentProducts} />
+                    <ProductGrid products={currentProducts} onInquireNowClick={handleInquireNowClick} />
                     <Pagination
                         currentPage={currentPage}
                         totalPages={totalPages}
@@ -72,6 +87,14 @@ const ProductPageMain = () => {
                     />
                 </div>
             </div>
+
+            {/* Modal Component */}
+            <Inquire_Modal 
+                isOpen={isModalOpen} 
+                onClose={() => setIsModalOpen(false)} 
+                products={products} 
+                onSubmit={handleFormSubmit} 
+            />
         </div>
     );
 };
