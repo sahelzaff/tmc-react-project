@@ -15,6 +15,7 @@
     "@splidejs/splide": "^4.1.4",
     "aos": "^2.3.4",
     "axios": "^1.7.4",
+    "dotenv": "^16.4.5",
     "google-recaptcha": "^1.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

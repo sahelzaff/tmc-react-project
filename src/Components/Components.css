@@ -1,10 +1,8 @@
-
-
 .colored-div {
     width: 100%;
-    
+
     background-color: white;
-    background-image: linear-gradient(-45deg,#1a1d28 65%,white 40%,white 66%,#d21317 40%);
+    background-image: linear-gradient(-45deg, #1a1d28 65%, white 40%, white 66%, #d21317 40%);
 }
 
 /* Navbar */
@@ -15,7 +13,7 @@
     font-weight: 600;
     color: #1a1d28;
     position: relative;
-    padding-bottom: 5px; 
+    padding-bottom: 5px;
     transition: color 0.3s ease, border-bottom 0.3s ease;
     cursor: pointer;
 }
@@ -26,18 +24,18 @@
     bottom: 0;
     left: 0;
     width: 0;
-    height: 2px; 
+    height: 2px;
     border-radius: 10px;
-    background-color: #d21317; 
+    background-color: #d21317;
     transition: width 0.3s ease;
 }
 
 .nav-item:hover {
-    color: #d21317; 
+    color: #d21317;
 }
 
 .nav-item:hover::after {
-    width: 30px; 
+    width: 30px;
 }
 
 /* Hero_Homepage */
@@ -46,22 +44,22 @@
 
 /* contact */
 
-  
+
 /* Contact Form input */
-/* From Uiverse.io by Satwinder04 */ 
+/* From Uiverse.io by Satwinder04 */
 .input-container {
     position: relative;
     margin: 50px auto;
     /* width: 200px; */
-  }
-  
+}
+
 .input-container2 {
     position: relative;
     margin: 30px auto;
     /* width: 200px; */
-  }
-  
-  .input-container input[type="text"] {
+}
+
+.input-container input[type="text"] {
     font-size: 14px;
     width: 100%;
     border: none;
@@ -69,65 +67,6 @@
     padding: 5px 0;
     background-color: transparent;
     outline: none;
-  }
-  
-  .input-container .label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #d21317;
-    transition: all 0.3s ease;
-    pointer-events: none;
-  }
-  
-  .input-container input[type="text"]:focus ~ .label,
-  .input-container input[type="text"]:valid ~ .label {
-    top: -20px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #1a1d28;
-    font-family: roboto;
-  }
-  
-  .input-container .underline {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background-color: #d21317;
-    transform: scaleX(0);
-    transition: all 0.3s ease;
-  }
-  
-  .input-container input[type="text"]:focus ~ .underline,
-  .input-container input[type="text"]:valid ~ .underline {
-    transform: scaleX(1);
-  }
-  
-
-  /* textarea */
-  .input-container {
-    position: relative;
-    margin: 50px auto;
-    /* width: 200px; */
-}
-
-.input-container2 {
-    position: relative;
-    margin: 30px auto;
-    /* width: 200px; */
-}
-
-.input-container textarea {
-    font-size: 14px;
-    width: 100%;
-    border: none;
-    /* border-bottom: 2px solid #ccc; */
-    padding: 5px 0;
-    background-color: transparent;
-    outline: none;
-    resize: none; /* Prevents textarea from being resizable */
 }
 
 .input-container .label {
@@ -139,8 +78,8 @@
     pointer-events: none;
 }
 
-.input-container textarea:focus ~ .label,
-.input-container textarea:valid ~ .label {
+.input-container input[type="text"]:focus~.label,
+.input-container input[type="text"]:valid~.label {
     top: -20px;
     font-size: 16px;
     font-weight: 500;
@@ -152,14 +91,70 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 2px;
+    height: 1px;
     width: 100%;
     background-color: #d21317;
     transform: scaleX(0);
     transition: all 0.3s ease;
 }
 
-.input-container textarea:focus ~ .underline,
-.input-container textarea:valid ~ .underline {
+.input-container input[type="text"]:focus~.underline,
+.input-container input[type="text"]:valid~.underline {
+    transform: scaleX(1);
+}
+
+
+/* textarea */
+.input-container {
+    position: relative;
+    margin: 50px auto;
+    /* width: 200px; */
+}
+
+
+
+.input-container textarea {
+    font-size: 14px;
+    width: 100%;
+    border: none;
+    /* border-bottom: 2px solid #ccc; */
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+    resize: none;
+    /* Prevents textarea from being resizable */
+}
+
+.input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #d21317;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.input-container textarea:focus~.label,
+.input-container textarea:valid~.label {
+    top: -20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1a1d28;
+    font-family: roboto;
+}
+
+.input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #d21317;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+
+.input-container textarea:focus~.underline,
+.input-container textarea:valid~.underline {
     transform: scaleX(1);
 }

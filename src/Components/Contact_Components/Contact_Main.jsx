@@ -55,8 +55,7 @@ const Contact_Main = () => {
                         </div>
                         <div>
                             <ReCAPTCHA
-                                sitekey='6LfmmvQpAAAAAPe_6emsWyHkSZ_AYCIv4-HgfSJQ'
-
+                                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                             />
                         </div>
 
