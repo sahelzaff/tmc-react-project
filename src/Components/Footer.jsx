@@ -8,7 +8,7 @@ import GoogleMapFooter from "./GoogleMapFooter";
 const Footer = () => {
     return (
         <footer className="bg-tmc-black text-white pt-12 ">
-            <div className="container mx-auto flex flex-wrap justify-between items-start ">
+            <div className="container mx-auto flex flex-wrap justify-between items-start px-16 ">
                 {/* Logo and Description */}
                 <div className="w-full md:w-1/4 mb-8 md:mb-0">
                     <div className="mb-4">
@@ -39,33 +39,20 @@ const Footer = () => {
                 <div className="w-full md:w-1/4 mb-8 md:mb-0">
                     <h3 className="font-semibold mb-4">Products & Services</h3>
                     <ul className="text-gray-400">
-                        <li className="cursor-pointer hover:text-gray-200">Automation</li>
-                        <li className="cursor-pointer hover:text-gray-200">Forging Shop & Mass Heating Equipment</li>
-                        <li className="cursor-pointer hover:text-gray-200">Foundry Melt Shop Equipment</li>
-                        <li className="cursor-pointer hover:text-gray-200">Heat Treatment & Special Applications</li>
-                        <li className="cursor-pointer hover:text-gray-200">Pipes & Tubes – Heating, Welding</li>
-                        <li className="cursor-pointer hover:text-gray-200">Power Distribution Equipment</li>
-                        <li className="cursor-pointer hover:text-gray-200">Solid State Power Supplies</li>
-                        <li className="cursor-pointer hover:text-gray-200">Steel Melt Shop Equipment</li>
-                        <li className="cursor-pointer hover:text-gray-200">Turnkey Solutions</li>
+                        <li className="cursor-pointer hover:text-gray-200">Home</li>
+                        <li className="cursor-pointer hover:text-gray-200">Explore Us</li>
+                        <li className="cursor-pointer hover:text-gray-200">Products & Services</li>
+                        <li className="cursor-pointer hover:text-gray-200">Clients Story</li>
+                        <li className="cursor-pointer hover:text-gray-200">FAQ</li>
+                        <li className="cursor-pointer hover:text-gray-200">Blogs</li>
+                        <li className="cursor-pointer hover:text-gray-200">Contact Us</li>
+
                     </ul>
                 </div>
 
                 {/* Useful Links */}
                 <div className="w-full md:w-1/4 mb-8 md:mb-0">
-                    <h3 className="font-semibold mb-4">Useful Links</h3>
-                    <ul className="text-gray-400">
-                        <li className="cursor-pointer hover:text-gray-200">Home</li>
-                        <li className="cursor-pointer hover:text-gray-200">Our Clients</li>
-                        <li className="cursor-pointer hover:text-gray-200">News & Events</li>
-                        <li className="cursor-pointer hover:text-gray-200">Download Brochure</li>
-                        <li className="cursor-pointer hover:text-gray-200">Contact</li>
-                        <li className="cursor-pointer hover:text-gray-200">About Us</li>
-                        <li className="cursor-pointer hover:text-gray-200">Investors</li>
-                        <li className="cursor-pointer hover:text-gray-200">CSR</li>
-                        <li className="cursor-pointer hover:text-gray-200">Careers</li>
-                        <li className="cursor-pointer hover:text-gray-200">Terms & Conditions</li>
-                    </ul>
+
                 </div>
 
                 {/* Our Location */}
@@ -91,16 +78,20 @@ const Footer = () => {
                         <div className="flex items-center bg-[#d21317] p-4 rounded mr-4 mb-4 cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out" >
                             <FaPhoneAlt className="h-6 w-6 text-white mr-2" />
                             <div>
-                                <p className="text-white">+91 98XXX XXXXX</p>
+                                <p className="text-white">+91 88386 37146</p>
                                 <p className="text-sm text-gray-300">Call Us Now</p>
                             </div>
                         </div>
                         <div className="flex items-center bg-[#262626] p-4 rounded mb-4 cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out">
                             <FaMapMarkerAlt className="h-6 w-6 text-gray-400 mr-2" />
-                            <div>
-                                <p className="text-gray-400">Some Where, Chennai</p>
-                                <p className="text-sm text-gray-500">Get Direction</p>
-                            </div>
+                            <a href="https://maps.app.goo.gl/KKKAaTbhksyvF6pm9" target="_blank" rel="noopener noreferrer">
+                                <div className="cursor-pointer">
+                                    <p className="text-gray-400">Radiance Suprema, 8th Floor</p>
+                                    <p className="text-sm text-gray-500">Get Directions</p>
+                                </div>
+                            </a>
+
+
                         </div>
                     </div>
                 </div>

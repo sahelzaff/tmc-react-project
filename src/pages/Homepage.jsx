@@ -22,7 +22,7 @@ const Homepage = () => {
             <About_Company_Homepage />
             <Products />
             <Services />
-            <Testimonial />
+            {/* <Testimonial /> */}
             <ContactHome />
             <Footer />
         </>

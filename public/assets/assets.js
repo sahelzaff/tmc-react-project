@@ -44,5 +44,8 @@ const assets = {
     CCM_Major_Equipments: '/assets/CCM_Major_Equipments.png',
     Ladle_and_Bell_Alarm: '/assets/Ladle_and_Bell_Alarm.png',
     Billets: '/assets/Billets.png',
+    about_company: '/assets/about_company.svg',
+    Consultant: '/assets/Consultant.svg',
+    Manpower_supply: '/assets/Manpower_supply.svg',
 };
 export default assets;

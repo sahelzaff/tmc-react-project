@@ -94,7 +94,7 @@ const Inquire_Modal = ({ isOpen, onClose, products }) => {
                     </div>
 
                     <div>
-                        <label className="block  font-roboto text-sm">Details/Special Specifications</label>
+                        <label className="block  font-roboto text-sm">Requirement</label>
                         <textarea
                             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:border-tmc-red focus:outline-none"
                             {...register('details')}
