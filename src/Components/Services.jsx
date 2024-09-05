@@ -94,9 +94,9 @@ const Services = () => {
 
                 {/* Service Description */}
                 <div className="w-2/3 px-6 pt-3">
-                    <h2 className="text-3xl font-bold mb-4 text-tmc-red">{selectedService.name}</h2>
-                    <img src={selectedService.image} alt={selectedService.name} className="w-full rounded-sm h-auto" />
-                    <p className="text-lg text-gray-700 pt-4">{selectedService.description}</p>
+                    <h2 className="text-4xl font-bold mb-4 text-tmc-red font-roboto ">{selectedService.name}</h2>
+                    <img src={selectedService.image} alt={selectedService.name} className="w-full rounded-sm h-auto " />
+                    <p className="text-lg text-gray-700 pt-4 font-roboto">{selectedService.description}</p>
                     <div className='w-full flex items-center justify-center'>
                         <button
                             type="button"
