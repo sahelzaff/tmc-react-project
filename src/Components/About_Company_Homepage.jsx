@@ -8,7 +8,7 @@ const About_Company_Homepage = () => {
       <div className="flex flex-row w-full items-center justify-center h-auto">
           <div className="w-1/2 flex items-center justify-center">
             <div className="relative group cursor-pointer w-[450px] h-auto" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">
-              <img src={assets.aboutcompany1} className="rounded-lg" alt="aboutcompany1" />
+              <img src={assets.about_Company} className="rounded-lg" alt="aboutcompany1" />
               {/* <img
                 src={assets.play_button}
                 alt="play_button"

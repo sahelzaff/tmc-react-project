@@ -9,14 +9,14 @@ const servicesData = [
         name: 'Consultant',
         description: 'Technomelt Solutions offers comprehensive consultancy services for steel melting shop projects, from turnkey solutions for mini steel plants to the expansion and modification of existing setups. Our expertise in automation and quality control ensures that your operations run smoothly, efficiently, and with the highest quality standards.',
         icon: <FaBriefcase className="text-2xl" />,
-        image: assets.service1,
+        image: assets.Consultant,
     },
     {
         id: 2,
         name: 'Man power supply',
         description: 'Technomelt Solutions provides specialized manpower supply services tailored to the steel industry. Our skilled professionals are equipped with the knowledge and experience needed to support your projects, ensuring timely and effective execution of all tasks, from installation to ongoing maintenance.',
         icon: <FaUsers className="text-2xl" />,
-        image: assets.service2,
+        image: assets.Manpower_supply,
     },
 ];
 
