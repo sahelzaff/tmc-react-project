@@ -19,11 +19,11 @@ const Navbar = () => {
                 <div>
                     <ul className='flex flex-row items-center justify-center gap-5'>
                         <li className='nav-item'><Link to="/">HOME</Link></li>
-                        <li className='nav-item'>EXPLORE US</li>
-                        <li className='nav-item'><Link to="/products">PRODUCTS & SERVICES</Link></li>
-                        <li className='nav-item'>CLIENTS STORY</li>
-                        <li className='nav-item'>FAQ</li>
-                        <li className='nav-item'>BLOG</li>
+                        <li className='nav-item'><Link to='/explore-us'>EXPLORE US</Link></li>
+                        <li className='nav-item'><Link to="/products">PRODUCTS</Link></li>
+                        <li className='nav-item'><Link to='/services'>SERVICES</Link></li> 
+                        {/* <li className='nav-item'>FAQ</li> */}
+                        {/* <li className='nav-item'>BLOG</li> */}
                         <li className='nav-item'><Link to="/contact-us">CONTACT US</Link></li>
                     </ul>
 

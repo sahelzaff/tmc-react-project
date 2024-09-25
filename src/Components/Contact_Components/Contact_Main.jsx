@@ -81,7 +81,8 @@ const Contact_Main = () => {
                                         <h2 className="font-roboto font-bold text-2xl text-tmc-red" >Address:</h2>
                                         <div className="w-72 font-poppins font-medium" id='timingdiv1'>
                                             <div className="">
-                                                <p className='text-tmc-black text-lg font-roboto'>Some Where, Chennai Get Direction</p>
+                                                <p className='text-tmc-black text-lg font-roboto'>Technomelt Solutions, Radiance Suprema, 8th Floor; Tower B, Madhavaram, Chennai,<br /> Tamil Nadu - 600060
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -94,7 +95,8 @@ const Contact_Main = () => {
                                         <h2 className="font-roboto font-bold text-2xl text-tmc-red" >Phone Number:</h2>
                                         <div className="w-72 font-poppins font-medium" id='timingdiv1'>
                                             <div className="">
-                                                <p className='text-tmc-black text-lg font-roboto'>+91 98XXX XXXXX</p>
+                                                <p className='text-tmc-black text-lg font-roboto'>+91 88386 37146</p>
+                                                
                                             </div>
                                         </div>
                                     </div>

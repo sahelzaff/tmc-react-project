@@ -51,7 +51,7 @@ const products = [
             'Major Equipment'
         ]
         ,
-        image: assets.product4
+        image: assets.withdrawal_unit
     },
     {
         id: 5,
@@ -71,7 +71,7 @@ const products = [
             'Major Equipment'
         ]
         ,
-        image: assets.product2
+        image: assets.roller
     },
     {
         id: 7,
@@ -81,7 +81,7 @@ const products = [
             'Major Equipment'
         ]
         ,
-        image: assets.product3
+        image: assets.drt_roller
     },
     {
         id: 8,
@@ -91,7 +91,7 @@ const products = [
             'Major Equipment'
         ]
         ,
-        image: assets.product4
+        image: assets.hydraulic_cylinder
     },
     {
         id: 9,
@@ -121,7 +121,7 @@ const products = [
             'Major Equipment'
         ]
         ,
-        image: assets.product3
+        image: assets.hydraulic_power
     },
     {
         id: 12,
@@ -141,7 +141,7 @@ const products = [
             'Major Equipment'
         ]
         ,
-        image: assets.product4
+        image: assets.dummy_bar
     },
     {
         id: 14,
@@ -161,7 +161,7 @@ const products = [
             'Major Equipment'
         ]
         ,
-        image: assets.product2
+        image: assets.dummy_bar
     },
     {
         id: 16,
@@ -171,7 +171,7 @@ const products = [
             'Major Equipment'
         ]
         ,
-        image: assets.product3
+        image: assets.Ladle_and_Bell_Alarm
     },
     {
         id: 17,
@@ -181,7 +181,7 @@ const products = [
             'Major Equipment'
         ]
         ,
-        image: assets.product4
+        image: assets.tundish_car
     },
     {
         id: 18,
@@ -191,7 +191,7 @@ const products = [
             'Major Equipment'
         ]
         ,
-        image: assets.product1
+        image: assets.spray_nozzle
     },
     {
         id: 19,
@@ -201,7 +201,7 @@ const products = [
             'Major Equipment'
         ]
         ,
-        image: assets.product2
+        image: assets.drt_roller
     },
     {
         id: 20,
@@ -211,7 +211,7 @@ const products = [
             'Major Equipment'
         ]
         ,
-        image: assets.product3
+        image: assets.billet
     },
     {
         id: 21,
@@ -221,7 +221,7 @@ const products = [
             'Major Equipment'
         ]
         ,
-        image: assets.product4
+        image: assets.shearing_machine
     },
     {
         id: 22,
@@ -231,7 +231,7 @@ const products = [
             'Major Equipment'
         ]
         ,
-        image: assets.product1
+        image: assets.sligate_cylinder
     },
     {
         id: 23,
@@ -241,7 +241,7 @@ const products = [
             'Major Equipment'
         ]
         ,
-        image: assets.product2
+        image: assets.Operational_Power_Pack
     },
     {
         id: 24,
@@ -271,7 +271,7 @@ const products = [
             'Billets',
             'Application'
         ],
-        image: assets.product1
+        image: assets.billet
     },
     {
         id: 27,

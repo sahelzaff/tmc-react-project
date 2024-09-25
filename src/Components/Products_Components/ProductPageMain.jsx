@@ -4,6 +4,7 @@ import ProductGrid from './ProductGrid';
 import Pagination from './Pagination';
 import Inquire_Modal from './Inquire_Modal';
 import { products, categories } from './productData';
+import { Link } from 'react-router-dom';
 
 const ProductPageMain = () => {
     const [selectedFilters, setSelectedFilters] = useState([]);
@@ -60,6 +61,13 @@ const ProductPageMain = () => {
 
     return (
         <div className="h-auto py-20 px-16 w-full" ref={productPageRef}>
+           <h2 className='font-roboto font-medium text-[18px] pb-4 text-black'>
+            <a href=''>
+                <Link to='/' className='hover:underline'>Home </Link>
+            
+            </a>
+               / Products</h2>
+
             <div className="flex flex-col w-full pb-10">
                 <div className="flex items-center gap-2 pb-2">
                     <h1 className="text-tmc-red font-roboto font-medium text-[19px]">
