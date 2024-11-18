@@ -1,14 +1,13 @@
 import React from "react";
 import assets from '../../public/assets/assets';
 import { FaLinkedin, FaYoutube, FaWhatsapp, FaInstagram, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
-import GoogleMap from "./GoogleMap";
+import { Link } from "react-router-dom";
 import GoogleMapFooter from "./GoogleMapFooter";
-
 
 const Footer = () => {
     return (
-        <footer className="bg-tmc-black text-white pt-12 ">
-            <div className="container mx-auto flex flex-wrap justify-between items-start px-16 ">
+        <footer className="bg-tmc-black text-white pt-12">
+            <div className="container mx-auto flex flex-wrap justify-between px-16">
                 {/* Logo and Description */}
                 <div className="w-full md:w-1/4 mb-8 md:mb-0">
                     <div className="mb-4">
@@ -31,35 +30,39 @@ const Footer = () => {
                             <FaInstagram className="h-6 w-6 hover:scale-125 transition-all duration-300 ease-in-out" />
                         </a>
                     </div>
-
-
                 </div>
 
-                {/* Products & Services */}
-                <div className="w-full md:w-1/4 mb-8 md:mb-0">
-                    <h3 className="font-semibold mb-4">Products & Services</h3>
-                    <ul className="text-gray-400">
-                        <li className="cursor-pointer hover:text-gray-200">Home</li>
-                        <li className="cursor-pointer hover:text-gray-200">Explore Us</li>
-                        <li className="cursor-pointer hover:text-gray-200">Products & Services</li>
-                        <li className="cursor-pointer hover:text-gray-200">Clients Story</li>
-                        <li className="cursor-pointer hover:text-gray-200">FAQ</li>
-                        <li className="cursor-pointer hover:text-gray-200">Blogs</li>
-                        <li className="cursor-pointer hover:text-gray-200">Contact Us</li>
+                {/* Three columns with equal top alignment */}
+                <div className="flex w-3/4 justify-between mt-5">
+                    {/* Products & Services */}
+                    <div className="w-1/3">
+                        <h3 className="font-semibold text-xl mb-3">Products & Services</h3>
+                        <ul className="text-gray-400">
+                            <li className="mb-2"><Link to="/" className="cursor-pointer hover:text-gray-200">Home</Link></li>
+                            <li className="mb-2"><Link to="/products" className="cursor-pointer hover:text-gray-200">Products</Link></li>
+                            <li className="mb-2"><Link to="/consultant" className="cursor-pointer hover:text-gray-200">Consultant</Link></li>
+                            <li className="mb-2"><Link to="/services" className="cursor-pointer hover:text-gray-200">Services</Link></li>
+                            <li className="mb-2"><Link to="/explore-us" className="cursor-pointer hover:text-gray-200">Explore Us</Link></li>
+                            <li className="mb-2"><Link to="/contact-us" className="cursor-pointer hover:text-gray-200">Contact Us</Link></li>
+                        </ul>
+                    </div>
 
-                    </ul>
-                </div>
+                    {/* Quick Links */}
+                    <div className="w-1/3">
+                        <h3 className="font-semibold text-xl mb-3">Quick Links</h3>
+                        <ul className="text-gray-400 space-y-2">
+                            <li className="cursor-pointer hover:text-gray-200">Privacy Policy</li>
+                            <li className="cursor-pointer hover:text-gray-200">Terms of Service</li>
+                            <li className="cursor-pointer hover:text-gray-200">Disclaimer</li>
+                        </ul>
+                    </div>
 
-                {/* Useful Links */}
-                <div className="w-full md:w-1/4 mb-8 md:mb-0">
-
-                </div>
-
-                {/* Our Location */}
-                <div className="w-full md:w-1/4">
-                    <h3 className="font-semibold mb-4">Our Location</h3>
-                    <div className="">
-                        <GoogleMapFooter />
+                    {/* Our Location */}
+                    <div className="w-1/3">
+                        <h3 className="font-semibold text-xl mb-3">Our Location</h3>
+                        <div>
+                            <GoogleMapFooter />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -90,8 +93,6 @@ const Footer = () => {
                                     <p className="text-sm text-gray-500">Get Directions</p>
                                 </div>
                             </a>
-
-
                         </div>
                     </div>
                 </div>

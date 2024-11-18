@@ -74,6 +74,14 @@ const assets = {
     withdrawal_unit: '/assets/withdrawal_unit.jpg',
     withdrawal_assembly: '/assets/withdrawal_assembly.jpg',
     consultant: '/assets/consultant.jpg',
+    Automation_Success: '/assets/Automation_Success.png',
+    Project_Management: '/assets/Project_Management.png',
+    Energy_Savings: '/assets/Energy_Savings.png',
+    Technical: '/assets/Technical.png',
+
+    
+
+
     
     
 };

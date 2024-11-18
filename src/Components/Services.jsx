@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { FaBriefcase, FaUsers } from 'react-icons/fa';
 import assets from '../../public/assets/assets';
 import Homepage_Modal from './Homepage_Modal';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const servicesData = [
     {
         id: 1,
         name: 'Consultant',
+        shortDescription: 'Expert consultancy services to optimize your casting operations.',
         description: 'Technomelt Solutions offers comprehensive consultancy services for steel melting shop projects, from turnkey solutions for mini steel plants to the expansion and modification of existing setups. Our expertise in automation and quality control ensures that your operations run smoothly, efficiently, and with the highest quality standards.',
         icon: <FaBriefcase className="text-2xl" />,
         image: assets.Consultant,
@@ -14,6 +16,7 @@ const servicesData = [
     {
         id: 2,
         name: 'Man power supply',
+        shortDescription: 'Specialized workforce for steel industry operations',
         description: 'Technomelt Solutions provides specialized manpower supply services tailored to the steel industry. Our skilled professionals are equipped with the knowledge and experience needed to support your projects, ensuring timely and effective execution of all tasks, from installation to ongoing maintenance.',
         icon: <FaUsers className="text-2xl" />,
         image: assets.Manpower_supply,
@@ -22,9 +25,8 @@ const servicesData = [
 
 const Services = () => {
     const [selectedService, setSelectedService] = useState(servicesData[0]);
-    const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    // Pre-load images to avoid delay
     useEffect(() => {
         servicesData.forEach(service => {
             const img = new Image();
@@ -32,38 +34,39 @@ const Services = () => {
         });
     }, []);
 
-    // Function to toggle the modal
-    const handleEnquireNowClick = () => {
-        setIsModalOpen(true);
+    const handleEnquireNowClick = () => setIsModalOpen(true);
+    const handleCloseModal = () => setIsModalOpen(false);
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: { 
+            opacity: 1,
+            transition: { duration: 0.5 }
+        }
     };
 
-    const handleCloseModal = () => {
-        setIsModalOpen(false);
+    const contentVariants = {
+        hidden: { opacity: 0, x: -50 },
+        visible: { 
+            opacity: 1, 
+            x: 0,
+            transition: { duration: 0.5 }
+        },
+        exit: {
+            opacity: 0,
+            x: 50,
+            transition: { duration: 0.3 }
+        }
     };
 
     return (
-        <div className="relative py-20 h-auto w-full">
-            <img
-                src={assets.tmt1}
-                alt="TMT Bars"
-                className="absolute top-0 left-0 w-40 h-auto"
-            />
-            <img
-                src={assets.tmt2}
-                alt="TMT Bars"
-                className="absolute top-0 left-0 w-40 h-auto"
-            />
-            <img
-                src={assets.tmt3}
-                alt="TMT Bars"
-                className="absolute top-0 left-0 w-40 h-auto"
-            />
-            <img
-                src={assets.tmt4}
-                alt="TMT Bars"
-                className="absolute top-0 left-0 w-40 h-auto"
-            />
-            <div className="px-16 pt-24">
+        <motion.div 
+            className="relative py-20 h-auto w-full bg-gradient-to-b from-gray-50 to-white"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+        >
+            <div className="relative z-10 px-16 pt-24">
                 <div className='flex items-center gap-2 pb-2'>
                     <h1 className='text-tmc-red font-roboto font-medium text-[19px]'>Our Services</h1>
                     <div className='h-[2px] w-6 bg-tmc-red'></div>
@@ -72,50 +75,89 @@ const Services = () => {
                 <p className='text-gray-600 font-roboto text-lg'>Technical Consultant for SMS Continuous Casting Automation</p>
             </div>
 
-            <div className="flex px-16 pt-10">
+            <div className="relative z-10 flex px-16 pt-10 gap-8">
                 {/* Service List */}
-                <div className="flex flex-col w-1/3 bg-gray-100 p-4 rounded-lg">
+                <div className="flex flex-col w-1/3">
                     {servicesData.map(service => (
-                        <div
+                        <motion.div
                             key={service.id}
-                            className={`flex items-center p-4 mb-4 cursor-pointer border rounded-lg transition 
-                          ${selectedService.id === service.id ? 'bg-tmc-red text-white' : 'hover:bg-tmc-red hover:text-white'}`}
-                            onMouseEnter={() => setSelectedService(service)}
+                            onClick={() => setSelectedService(service)}
+                            className={`flex flex-col p-6 mb-4 cursor-pointer rounded-xl transition-all duration-300 
+                                ${selectedService.id === service.id 
+                                    ? 'bg-tmc-red text-white shadow-lg' 
+                                    : 'bg-white hover:bg-tmc-red/5 shadow-md'}`}
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
                         >
-                            <div className={`${selectedService.id === service.id ? 'text-white' : ''} ${'group-hover:text-white'}`}>
-                                {service.icon}
+                            <div className="flex items-center">
+                                <div className={selectedService.id === service.id ? 'text-white' : 'text-tmc-red'}>
+                                    {service.icon}
+                                </div>
+                                <span className={`ml-4 font-medium text-xl ${selectedService.id === service.id ? 'text-white' : 'text-tmc-black'}`}>
+                                    {service.name}
+                                </span>
                             </div>
-                            <span className={`ml-4 font-medium ${selectedService.id === service.id ? 'text-white' : ''} ${'group-hover:text-white'}`}>
-                                {service.name}
-                            </span>
-                        </div>
+                            <p className={`mt-3 text-[15px] ${selectedService.id === service.id ? 'text-white/90' : 'text-gray-600'}`}>
+                                {service.shortDescription}
+                            </p>
+                        </motion.div>
                     ))}
                 </div>
 
                 {/* Service Description */}
-                <div className="w-2/3 px-6 pt-3">
-                    <h2 className="text-4xl font-bold mb-4 text-tmc-red font-roboto ">{selectedService.name}</h2>
-                    <img src={selectedService.image} alt={selectedService.name} className="w-full rounded-sm h-auto " />
-                    <p className="text-lg text-gray-700 pt-4 font-roboto">{selectedService.description}</p>
-                    <div className='w-full flex items-center justify-center'>
-                        <button
-                            type="button"
-                            className="mt-5 text-[18px] font-roboto font-bold bg-transparent border-[3px] border-tmc-red text-tmc-red px-12 text-center py-2 rounded-lg transition-all duration-300 ease-in-out"
-                            onClick={handleEnquireNowClick} // Open the modal on click
+                <div className="w-2/3">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={selectedService.id}
+                            variants={contentVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                            className="bg-white p-8 rounded-xl shadow-lg"
                         >
-                            Enquire Now
-                        </button>
-                    </div>
+                            <h2 className="text-4xl font-bold mb-6 text-tmc-red font-roboto">
+                                {selectedService.name}
+                            </h2>
+                            <motion.div 
+                                className="relative overflow-hidden rounded-xl mb-6"
+                                whileHover={{ scale: 1.02 }}
+                                transition={{ duration: 0.3 }}
+                            >
+                                <img 
+                                    src={selectedService.image} 
+                                    alt={selectedService.name} 
+                                    className="w-full h-[300px] object-cover rounded-xl shadow-md"
+                                />
+                            </motion.div>
+                            <p className="text-lg text-gray-700 leading-relaxed font-roboto">
+                                {selectedService.description}
+                            </p>
+                            <div className='w-full flex items-center justify-center mt-8'>
+                                <motion.button
+                                    whileHover={{ 
+                                        scale: 1.05,
+                                        backgroundColor: '#d21317',
+                                        color: 'white',
+                                    }}
+                                    whileTap={{ scale: 0.95 }}
+                                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                                    className="text-[18px] font-roboto font-bold bg-transparent border-[3px] border-tmc-red text-tmc-red px-12 py-3 rounded-lg shadow-lg hover:shadow-xl"
+                                    onClick={handleEnquireNowClick}
+                                >
+                                    Book a Consultation
+                                </motion.button>
+                            </div>
+                        </motion.div>
+                    </AnimatePresence>
                 </div>
             </div>
 
-            {/* Modal Component */}
             <Homepage_Modal
                 isOpen={isModalOpen}
                 onClose={handleCloseModal}
-                products={servicesData} // Pass the products to the modal
+                products={servicesData}
             />
-        </div>
+        </motion.div>
     );
 }
 

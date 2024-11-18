@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const ProductGrid = ({ products, onInquireNowClick }) => {
     return (
@@ -15,13 +16,16 @@ const ProductGrid = ({ products, onInquireNowClick }) => {
                         <p className="text-center text-sm">{product.description}</p>
                     </div>
                     <div className="w-full flex items-center pt-7 pb-4">
-                        <button
+                        <motion.button
                             type="button"
-                            className="mx-auto text-[18px] font-roboto font-bold bg-tmc-red border-[3px] border-white text-white px-12 text-center py-2 rounded-lg hover:scale-105 transition-all duration-300 ease-in-out"
+                            className="mx-auto text-[18px] font-roboto font-bold bg-tmc-red border-[3px] border-white text-white px-12 text-center py-2 rounded-lg"
                             onClick={() => onInquireNowClick(product)}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            transition={{ type: "spring", stiffness: 400, damping: 17 }}
                         >
-                            Inquire Now
-                        </button>
+                           Get a Quote
+                        </motion.button>
                     </div>
                 </div>
             ))}

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Components.css";
 import assets from "../../public/assets/assets";
+import { Link } from "react-router-dom";
 
 const About_Company_Homepage = () => {
   return (
@@ -38,13 +39,15 @@ const About_Company_Homepage = () => {
               smoothly and efficiently.
             </p>
 
-            <button
-              type="button"
-              className="bg-transparent border-[3px] border-white text-white px-8 rounded-lg py-2 text-[20px] font-bold my-10 hover:bg-white hover:text-tmc-red"
-              data-aos="fade-in" data-aos-duration="1000" data-aos-once="true"
-            >
-              Learn More
-            </button>
+            <Link to="/explore-us">
+              <button
+                type="button"
+                className="bg-transparent border-[3px] border-white text-white px-8 rounded-lg py-2 text-[20px] font-bold my-10 hover:bg-white hover:text-tmc-red"
+                data-aos="fade-in" data-aos-duration="1000" data-aos-once="true"
+              >
+                Learn More
+              </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import assets from "../../public/assets/assets";
 import "./Components.css"; // Make sure your CSS file is linked if you have additional styling
+import { Link } from "react-router-dom";
 
 const Products = () => {
   return (
@@ -24,7 +25,7 @@ const Products = () => {
 
       <div className="pb-20">
         <div className="flex flex-row items-center justify-center gap-20">
-          <div className="bg-white flex flex-col items-center justify-center w-[350px] h-auto p-4 rounded-lg shadow-lg" data-aos='fade-left' data-aos-duration="1000" data-aos-once="true"  data-aos-delay="500">
+          <div className="bg-white flex flex-col items-center justify-center w-[350px] h-auto p-4 rounded-lg shadow-lg" data-aos='fade-left' data-aos-duration="1000" data-aos-once="true" data-aos-delay="500">
             <img src={assets.Machinery} alt="" className="w-[400px] pb-4" srcset="" />
             <h2 className="font-bold font-roboto text-tmc-red text-2xl py-4">
               Machinery
@@ -75,12 +76,14 @@ const Products = () => {
         </div>
       </div>
       <div className=" w-full flex items-center pb-14">
-        <button
-          type="button"
-          className="mt-5 mx-auto text-[18px] font-roboto font-bold bg-transparent border-[3px] border-white text-white px-12 text-center py-2 rounded-lg hover:text-tmc-red hover:border-tmc-red transition-all duration-300 ease-in-out"
-        >
-          View All Products
-        </button>
+        <Link to="/products" className="mx-auto">
+          <button
+            type="button"
+            className="mt-5 mx-auto text-[18px] font-roboto font-bold bg-transparent border-[3px] border-white text-white px-12 text-center py-2 rounded-lg hover:text-tmc-red hover:border-tmc-red transition-all duration-300 ease-in-out"
+          >
+            View All Products
+          </button>
+        </Link>
       </div>
     </div>
   );

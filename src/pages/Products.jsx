@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Topbar from '../Components/Topbar'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
@@ -7,6 +7,10 @@ import ProductPageMain from '../Components/Products_Components/ProductPageMain'
 import Product_Hero from '../Components/Products_Components/Product_Hero'
 
 const Products = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
   return (
     <>
         <Topbar/>

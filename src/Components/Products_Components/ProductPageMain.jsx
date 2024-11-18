@@ -63,10 +63,10 @@ const ProductPageMain = () => {
         <div className="h-auto py-20 px-16 w-full" ref={productPageRef}>
            <h2 className='font-roboto font-medium text-[18px] pb-4 text-black'>
             <a href=''>
-                <Link to='/' className='hover:underline'>Home </Link>
+                <Link to='/' className='hover:underline'>Home</Link>
             
             </a>
-               / Products</h2>
+               /Products</h2>
 
             <div className="flex flex-col w-full pb-10">
                 <div className="flex items-center gap-2 pb-2">
@@ -75,7 +75,10 @@ const ProductPageMain = () => {
                     </h1>
                     <div className="h-[2px] w-6 bg-tmc-red"></div>
                 </div>
-                <h2 className="text-black font-roboto font-bold text-5xl">
+                <p className="text-black font-roboto text-lg mb-6">
+                    Explore our range of advanced Continuous Casting Machines and major equipment designed for optimal performance. <Link to="/contact-us" className="text-tmc-red hover:underline">Contact us for more details.</Link>
+                </p>
+                <h2 className="text-black font-roboto font-bold text-5xl mt-10">
                     Products
                 </h2>
             </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Topbar from '../Components/Topbar'
 import Navbar from '../Components/Navbar'
 import Hero_Homepage from '../Components/Hero_Homepage'
@@ -10,6 +10,10 @@ import ContactHome from '../Components/ContactHome'
 import Footer from '../Components/Footer'
 
 const Homepage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <Topbar />
@@ -22,11 +26,10 @@ const Homepage = () => {
             <About_Company_Homepage />
             <Products />
             <Services />
-            {/* <Testimonial /> */}
+            <Testimonial />
             <ContactHome />
             <Footer />
         </>
-
     )
 }
 

@@ -48,7 +48,7 @@ const Homepage_Modal = ({ isOpen, onClose }) => {
 
                 {/* Form */}
                 <form onSubmit={handleSubmit(handleFormSubmit)} className="space-y-4">
-                    <h2 className="text-2xl font-bold mb-4 text-center">Inquiry Form</h2>
+                    <h2 className="text-2xl font-bold mb-4 text-center">Book a Consultation</h2>
 
                     <div>
                         <label className="block  font-roboto text-sm">Name</label>
