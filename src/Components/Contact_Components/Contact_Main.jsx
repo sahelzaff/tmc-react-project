@@ -7,7 +7,6 @@ import { SlDirections } from "react-icons/sl";
 import Modal from 'react-modal';
 import '../Components.css'
 import Googlemap_contact from './Googlemap_contact';
-import GoogleMap from './GoogleMap';
 import { motion } from 'framer-motion';
 import { toast } from 'react-hot-toast';
 import Breadcrumb from '../Breadcrumb';
