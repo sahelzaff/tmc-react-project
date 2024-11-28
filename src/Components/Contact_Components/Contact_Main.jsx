@@ -7,12 +7,23 @@ import { SlDirections } from "react-icons/sl";
 import Modal from 'react-modal';
 import '../Components.css'
 import Googlemap_contact from './Googlemap_contact';
+import GoogleMap from './GoogleMap';
+import { motion } from 'framer-motion';
+import { toast } from 'react-hot-toast';
+import Breadcrumb from '../Breadcrumb';
 
 const Contact_Main = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const breadcrumbItems = [
+        { label: 'Home', link: '/' },
+        { label: 'Contact Us' }
+    ];
 
     return (
         <div className='w-full max-w-screen-2xl pt-10 h-full'>
+            <div className='px-16'>
+                <Breadcrumb items={breadcrumbItems} />
+            </div>
 
             <div className='flex flex-col'>
                 <div>

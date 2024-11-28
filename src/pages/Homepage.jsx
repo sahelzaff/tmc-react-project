@@ -20,13 +20,13 @@ const Homepage = () => {
             <Navbar />
             <Hero_Homepage
             heading="Your Trusted Partner in Continuous Casting Machines and Equipment" 
-            paragraph="High-quality products and expert consulting services for all your needs" 
-            buttonText="Explore Our Products" 
+            // paragraph="High-quality products and expert consulting services for all your needs" 
+            buttonText="Get Quotes" 
             />
             <About_Company_Homepage />
             <Products />
             <Services />
-            <Testimonial />
+            {/* <Testimonial /> */}
             <ContactHome />
             <Footer />
         </>

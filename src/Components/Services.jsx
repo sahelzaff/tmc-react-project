@@ -3,6 +3,7 @@ import { FaBriefcase, FaUsers } from 'react-icons/fa';
 import assets from '../../public/assets/assets';
 import Homepage_Modal from './Homepage_Modal';
 import { motion, AnimatePresence } from 'framer-motion';
+import { toast } from 'react-hot-toast';
 
 const servicesData = [
     {
@@ -34,8 +35,37 @@ const Services = () => {
         });
     }, []);
 
-    const handleEnquireNowClick = () => setIsModalOpen(true);
-    const handleCloseModal = () => setIsModalOpen(false);
+    const handleEnquireNowClick = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleFormSubmit = (formData) => {
+        try {
+            console.log("Form Submitted", formData);
+            toast.success('Thanks for booking a consultation! We will contact you soon.', {
+                duration: 5000,
+                style: {
+                    background: '#22c55e',
+                    color: '#fff',
+                    fontFamily: 'Roboto, sans-serif',
+                    fontSize: '16px',
+                    padding: '16px'
+                }
+            });
+            setIsModalOpen(false);
+        } catch (error) {
+            toast.error('There was an error submitting the form. Please try again.', {
+                duration: 3000,
+                style: {
+                    background: '#ef4444',
+                    color: '#fff',
+                    fontFamily: 'Roboto, sans-serif',
+                    fontSize: '16px',
+                    padding: '16px'
+                }
+            });
+        }
+    };
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -126,7 +156,7 @@ const Services = () => {
                                 <img 
                                     src={selectedService.image} 
                                     alt={selectedService.name} 
-                                    className="w-full h-[300px] object-cover rounded-xl shadow-md"
+                                    className="w-full object-cover rounded-xl shadow-md"
                                 />
                             </motion.div>
                             <p className="text-lg text-gray-700 leading-relaxed font-roboto">
@@ -154,7 +184,8 @@ const Services = () => {
 
             <Homepage_Modal
                 isOpen={isModalOpen}
-                onClose={handleCloseModal}
+                onClose={() => setIsModalOpen(false)}
+                onSubmit={handleFormSubmit}
                 products={servicesData}
             />
         </motion.div>
