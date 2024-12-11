@@ -18,7 +18,7 @@ const Explore_Us = () => {
             <Navbar/>
             <Explore_Hero/>
             <Explore_team/>
-            <Explore_team_card/>
+            {/* <Explore_team_card/> */}
             <Explore_Contact/>
             <Footer/>
             

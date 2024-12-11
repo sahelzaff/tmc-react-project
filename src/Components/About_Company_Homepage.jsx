@@ -39,7 +39,7 @@ const About_Company_Homepage = () => {
               smoothly and efficiently.
             </p>
 
-            <Link to="/explore-us">
+            <Link to="/about-us">
               <button
                 type="button"
                 className="bg-transparent border-[3px] border-white text-white px-8 rounded-lg py-2 text-[20px] font-bold my-10 hover:bg-white hover:text-tmc-red"

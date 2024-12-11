@@ -34,12 +34,14 @@ const Products = () => {
               Advanced Continuous Casting Machines designed for efficiency and
               durability.
             </p>
-            <button
-              type="button"
-              className="my-5 text-[18px] font-roboto font-bold bg-transparent border-[3px] border-tmc-red text-tmc-red px-10 text-center py-1 rounded-lg hover:text-white hover:bg-tmc-red transition-all duration-300 ease-in-out"
-            >
-              View Products
-            </button>
+            <Link to="/products">
+              <button
+                type="button"
+                className="my-5 text-[18px] font-roboto font-bold bg-transparent border-[3px] border-tmc-red text-tmc-red px-10 text-center py-1 rounded-lg hover:text-white hover:bg-tmc-red transition-all duration-300 ease-in-out"
+              >
+                View Products
+              </button>
+            </Link>
           </div>
           <div className="bg-white flex flex-col items-center justify-center w-[350px] h-auto p-4 rounded-lg shadow-lg" data-aos='zoom-in' data-aos-duration="700" data-aos-once="true" >
             <img src={assets.Major_Equipments} alt="" className="w-[400px] pb-4" srcset="" />
@@ -51,12 +53,14 @@ const Products = () => {
               Comprehensive range of major equipment ensuring seamless
               operation.
             </p>
-            <button
-              type="button"
-              className="my-5 text-[18px] font-roboto font-bold bg-transparent border-[3px] border-tmc-red text-tmc-red px-10 text-center py-1 rounded-lg hover:text-white hover:bg-tmc-red transition-all duration-300 ease-in-out"
-            >
-              View Products
-            </button>
+            <Link to="/products">
+              <button
+                type="button"
+                className="my-5 text-[18px] font-roboto font-bold bg-transparent border-[3px] border-tmc-red text-tmc-red px-10 text-center py-1 rounded-lg hover:text-white hover:bg-tmc-red transition-all duration-300 ease-in-out"
+              >
+                View Products
+              </button>
+            </Link>
           </div>
           <div className="bg-white flex flex-col items-center justify-center w-[350px] h-auto p-4 rounded-lg shadow-lg" data-aos='fade-right' data-aos-duration="1000" data-aos-once="true" data-aos-delay="500" >
             <img src={assets.Billets} alt="" className="w-[400px] pb-4" srcset="" />
@@ -66,12 +70,14 @@ const Products = () => {
             <p className="font-roboto text-[14px] text-gray-500 text-center">
               Various sizes and shapes to meet your production needs.
             </p>
-            <button
-              type="button"
-              className="my-5 text-[18px] font-roboto font-bold bg-transparent border-[3px] border-tmc-red text-tmc-red px-10 text-center py-1 rounded-lg hover:text-white hover:bg-tmc-red transition-all duration-300 ease-in-out"
-            >
-              View Products
-            </button>
+            <Link to="/products">
+              <button
+                type="button"
+                className="my-5 text-[18px] font-roboto font-bold bg-transparent border-[3px] border-tmc-red text-tmc-red px-10 text-center py-1 rounded-lg hover:text-white hover:bg-tmc-red transition-all duration-300 ease-in-out"
+              >
+                View Products
+              </button>
+            </Link>
           </div>
         </div>
       </div>

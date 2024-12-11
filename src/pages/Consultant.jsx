@@ -19,7 +19,7 @@ const Consultant = () => {
             <Consultant_Hero />
             <Consultant_Intro />
             <Consultant_Services />
-            <Success_Stories />
+            {/* <Success_Stories /> */}
             <Footer />
         </>
     )
