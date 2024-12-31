@@ -229,3 +229,25 @@
     max-width: 28rem;
     margin: 0 1rem;
 }
+
+/* Mobile Navigation Styles */
+.mobile-nav-item {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1d28;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-item:hover {
+    color: #d21317;
+    padding-left: 8px;
+}
+
+.mobile-nav-item.active {
+    color: #d21317;
+    border-left: 3px solid #d21317;
+    padding-left: 12px;
+}

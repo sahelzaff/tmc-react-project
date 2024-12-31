@@ -131,14 +131,14 @@ const QuoteModal = ({ isOpen, onClose }) => {
         <AnimatePresence>
             {isOpen && (
                 <motion.div 
-                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4"
                     variants={overlayVariants}
                     initial="hidden"
                     animate="visible"
                     exit="exit"
                 >
                     <motion.div 
-                        className="bg-white p-8 rounded-lg relative w-full max-w-md mx-4"
+                        className="bg-white p-6 md:p-8 rounded-lg relative w-full max-w-md"
                         variants={modalVariants}
                         initial="hidden"
                         animate="visible"
@@ -155,7 +155,7 @@ const QuoteModal = ({ isOpen, onClose }) => {
 
                         <form onSubmit={handleSubmit(handleFormSubmit)} className="space-y-4">
                             <motion.h2 
-                                className="text-2xl font-bold mb-4 text-center"
+                                className="text-xl md:text-2xl font-bold mb-4 text-center"
                                 variants={inputVariants}
                             >
                                 Get a Quote
@@ -239,17 +239,27 @@ const Hero_Homepage = ({ heading, paragraph, buttonText }) => {
                     rewind: true,
                     autoplay: true,
                     interval: 1500,
+                    arrows: false,
+                    pagination: true,
                 }}
             >
                 <SplideSlide>
-                    <div className="relative h-[80vh] w-full">
-                        <img src={assets.Major_Equipments} className='h-full w-full object-cover' alt="Image 1" />
-                        <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
-                            <h1 className="text-4xl md:text-6xl font-bold text-center font-roboto" data-aos='fade-up' data-aos-duration="1000" data-aos-once="true">{heading}</h1>
-                            <p className="mt-4 text-lg md:text-2xl font-roboto" data-aos='fade-up' data-aos-duration="1000" data-aos-once="true" data-aos-delay="200">{paragraph}</p>
+                    <div className="relative h-[50vh] md:h-[80vh] w-full">
+                        <img src={assets.Major_Equipments} className='h-full w-full object-cover' alt="Major Equipments" />
+                        <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-50 px-4 md:px-0">
+                            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-center font-roboto max-w-4xl" 
+                                data-aos='fade-up' data-aos-duration="1000" data-aos-once="true">
+                                {heading}
+                            </h1>
+                            {paragraph && (
+                                <p className="mt-2 md:mt-4 text-base md:text-lg lg:text-2xl text-center font-roboto max-w-2xl px-4" 
+                                    data-aos='fade-up' data-aos-duration="1000" data-aos-once="true" data-aos-delay="200">
+                                    {paragraph}
+                                </p>
+                            )}
                             <button 
                                 onClick={() => setIsModalOpen(true)}
-                                className="mt-8 px-6 py-3 bg-[#d21317] hover:bg-[#9d0e11] text-white font-semibold text-lg rounded font-roboto" 
+                                className="mt-4 md:mt-8 px-4 md:px-6 py-2 md:py-3 bg-[#d21317] hover:bg-[#9d0e11] text-white font-semibold text-base md:text-lg rounded font-roboto transition-all duration-300" 
                                 data-aos='fade-up' 
                                 data-aos-duration="1000" 
                                 data-aos-once="true" 
@@ -260,49 +270,91 @@ const Hero_Homepage = ({ heading, paragraph, buttonText }) => {
                         </div>
                     </div>
                 </SplideSlide>
+
                 <SplideSlide>
-                    <div className="relative h-[80vh] w-full">
-                        <img src={assets.Technical_Consultant} className='h-full w-full object-cover' alt="Image 1" />
-                        <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
-                            <h1 className="text-4xl md:text-6xl font-bold text-center font-roboto" data-aos='fade-up' data-aos-duration="1000" data-aos-once="true">{heading}</h1>
-                            <p className="mt-4 text-lg md:text-2xl font-roboto" data-aos='fade-up' data-aos-duration="1000" data-aos-once="true" data-aos-delay="200">{paragraph}</p>
-                          
-                                <button className="mt-8 px-6 py-3 bg-[#d21317] hover:bg-[#9d0e11] text-white font-semibold text-lg rounded font-roboto" data-aos='fade-up' data-aos-duration="1000" data-aos-once="true" data-aos-delay="400">
-                                    {buttonText}
-                                </button>
-                           
+                    <div className="relative h-[50vh] md:h-[80vh] w-full">
+                        <img src={assets.Technical_Consultant} className='h-full w-full object-cover' alt="Technical Consultant" />
+                        <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-50 px-4 md:px-0">
+                            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-center font-roboto max-w-4xl" 
+                                data-aos='fade-up' data-aos-duration="1000" data-aos-once="true">
+                                {heading}
+                            </h1>
+                            {paragraph && (
+                                <p className="mt-2 md:mt-4 text-base md:text-lg lg:text-2xl text-center font-roboto max-w-2xl px-4" 
+                                    data-aos='fade-up' data-aos-duration="1000" data-aos-once="true" data-aos-delay="200">
+                                    {paragraph}
+                                </p>
+                            )}
+                            <button 
+                                onClick={() => setIsModalOpen(true)}
+                                className="mt-4 md:mt-8 px-4 md:px-6 py-2 md:py-3 bg-[#d21317] hover:bg-[#9d0e11] text-white font-semibold text-base md:text-lg rounded font-roboto transition-all duration-300" 
+                                data-aos='fade-up' 
+                                data-aos-duration="1000" 
+                                data-aos-once="true" 
+                                data-aos-delay="300"
+                            >
+                                {buttonText}
+                            </button>
                         </div>
                     </div>
                 </SplideSlide>
+
                 <SplideSlide>
-                    <div className="relative h-[80vh] w-full">
-                        <img src={assets.Tundish} className='h-full w-full object-cover' alt="Image 1" />
-                        <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
-                            <h1 className="text-4xl md:text-6xl font-bold text-center font-roboto" data-aos='fade-up' data-aos-duration="1000" data-aos-once="true">{heading}</h1>
-                            <p className="mt-4 text-lg md:text-2xl font-roboto" data-aos='fade-up' data-aos-duration="1000" data-aos-once="true" data-aos-delay="200">{paragraph}</p>
-                          
-                                <button className="mt-8 px-6 py-3 bg-[#d21317] hover:bg-[#9d0e11] text-white font-semibold text-lg rounded font-roboto" data-aos='fade-up' data-aos-duration="1000" data-aos-once="true" data-aos-delay="400">
-                                    {buttonText}
-                                </button>
-                           
+                    <div className="relative h-[50vh] md:h-[80vh] w-full">
+                        <img src={assets.Tundish} className='h-full w-full object-cover' alt="Tundish" />
+                        <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-50 px-4 md:px-0">
+                            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-center font-roboto max-w-4xl" 
+                                data-aos='fade-up' data-aos-duration="1000" data-aos-once="true">
+                                {heading}
+                            </h1>
+                            {paragraph && (
+                                <p className="mt-2 md:mt-4 text-base md:text-lg lg:text-2xl text-center font-roboto max-w-2xl px-4" 
+                                    data-aos='fade-up' data-aos-duration="1000" data-aos-once="true" data-aos-delay="200">
+                                    {paragraph}
+                                </p>
+                            )}
+                            <button 
+                                onClick={() => setIsModalOpen(true)}
+                                className="mt-4 md:mt-8 px-4 md:px-6 py-2 md:py-3 bg-[#d21317] hover:bg-[#9d0e11] text-white font-semibold text-base md:text-lg rounded font-roboto transition-all duration-300" 
+                                data-aos='fade-up' 
+                                data-aos-duration="1000" 
+                                data-aos-once="true" 
+                                data-aos-delay="300"
+                            >
+                                {buttonText}
+                            </button>
                         </div>
                     </div>
                 </SplideSlide>
+
                 <SplideSlide>
-                    <div className="relative h-[80vh] w-full">
-                        <img src={assets.Machinery} className='h-full w-full object-cover' alt="Image 1" />
-                        <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
-                            <h1 className="text-4xl md:text-6xl font-bold text-center font-roboto" data-aos='fade-up' data-aos-duration="1000" data-aos-once="true">{heading}</h1>
-                            <p className="mt-4 text-lg md:text-2xl font-roboto" data-aos='fade-up' data-aos-duration="1000" data-aos-once="true" data-aos-delay="200">{paragraph}</p>
+                    <div className="relative h-[50vh] md:h-[80vh] w-full">
+                        <img src={assets.Machinery} className='h-full w-full object-cover' alt="Machinery" />
+                        <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-50 px-4 md:px-0">
+                            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-center font-roboto max-w-4xl" 
+                                data-aos='fade-up' data-aos-duration="1000" data-aos-once="true">
+                                {heading}
+                            </h1>
+                            {paragraph && (
+                                <p className="mt-2 md:mt-4 text-base md:text-lg lg:text-2xl text-center font-roboto max-w-2xl px-4" 
+                                    data-aos='fade-up' data-aos-duration="1000" data-aos-once="true" data-aos-delay="200">
+                                    {paragraph}
+                                </p>
+                            )}
                             <Link to="/products">
-                                <button className="mt-8 px-6 py-3 bg-[#d21317] hover:bg-[#9d0e11] text-white font-semibold text-lg rounded font-roboto" data-aos='fade-up' data-aos-duration="1000" data-aos-once="true" data-aos-delay="400">
+                                <button 
+                                    className="mt-4 md:mt-8 px-4 md:px-6 py-2 md:py-3 bg-[#d21317] hover:bg-[#9d0e11] text-white font-semibold text-base md:text-lg rounded font-roboto transition-all duration-300" 
+                                    data-aos='fade-up' 
+                                    data-aos-duration="1000" 
+                                    data-aos-once="true" 
+                                    data-aos-delay="300"
+                                >
                                     {buttonText}
                                 </button>
                             </Link>
                         </div>
                     </div>
                 </SplideSlide>
-                {/* Other slides can be included similarly */}
             </Splide>
 
             <QuoteModal 

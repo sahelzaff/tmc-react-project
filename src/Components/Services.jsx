@@ -11,7 +11,7 @@ const servicesData = [
         name: 'Consultant',
         shortDescription: 'Expert consultancy services to optimize your casting operations.',
         description: 'Technomelt Solutions offers comprehensive consultancy services for steel melting shop projects, from turnkey solutions for mini steel plants to the expansion and modification of existing setups. Our expertise in automation and quality control ensures that your operations run smoothly, efficiently, and with the highest quality standards.',
-        icon: <FaBriefcase className="text-2xl" />,
+        icon: <FaBriefcase className="text-2xl md:text-3xl" />,
         image: assets.Consultant,
     },
     {
@@ -19,7 +19,7 @@ const servicesData = [
         name: 'Man power supply',
         shortDescription: 'Specialized workforce for steel industry operations',
         description: 'Technomelt Solutions provides specialized manpower supply services tailored to the steel industry. Our skilled professionals are equipped with the knowledge and experience needed to support your projects, ensuring timely and effective execution of all tasks, from installation to ongoing maintenance.',
-        icon: <FaUsers className="text-2xl" />,
+        icon: <FaUsers className="text-2xl md:text-3xl" />,
         image: assets.Manpower_supply,
     },
 ];
@@ -91,28 +91,28 @@ const Services = () => {
 
     return (
         <motion.div 
-            className="relative py-20 h-auto w-full bg-gradient-to-b from-gray-50 to-white"
+            className="relative py-10 md:py-20 h-auto w-full bg-gradient-to-b from-gray-50 to-white"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
         >
-            <div className="relative z-10 px-16 pt-24">
+            <div className="relative z-10 px-4 md:px-16 pt-12 md:pt-24">
                 <div className='flex items-center gap-2 pb-2'>
-                    <h1 className='text-tmc-red font-roboto font-medium text-[19px]'>Our Services</h1>
+                    <h1 className='text-tmc-red font-roboto font-medium text-[16px] md:text-[19px]'>Our Services</h1>
                     <div className='h-[2px] w-6 bg-tmc-red'></div>
                 </div>
-                <h2 className='text-tmc-black font-roboto font-bold text-5xl'>Services</h2>
-                <p className='text-gray-600 font-roboto text-lg'>Technical Consultant for SMS Continuous Casting Automation</p>
+                <h2 className='text-tmc-black font-roboto font-bold text-2xl md:text-4xl lg:text-5xl'>Services</h2>
+                <p className='text-gray-600 font-roboto text-base md:text-lg mt-2'>Technical Consultant for SMS Continuous Casting Automation</p>
             </div>
 
-            <div className="relative z-10 flex px-16 pt-10 gap-8">
+            <div className="relative z-10 flex flex-col lg:flex-row px-4 md:px-16 pt-8 md:pt-10 gap-6 md:gap-8">
                 {/* Service List */}
-                <div className="flex flex-col w-1/3">
+                <div className="flex flex-col w-full lg:w-1/3">
                     {servicesData.map(service => (
                         <motion.div
                             key={service.id}
                             onClick={() => setSelectedService(service)}
-                            className={`flex flex-col p-6 mb-4 cursor-pointer rounded-xl transition-all duration-300 
+                            className={`flex flex-col p-4 md:p-6 mb-4 cursor-pointer rounded-xl transition-all duration-300 
                                 ${selectedService.id === service.id 
                                     ? 'bg-tmc-red text-white shadow-lg' 
                                     : 'bg-white hover:bg-tmc-red/5 shadow-md'}`}
@@ -123,11 +123,11 @@ const Services = () => {
                                 <div className={selectedService.id === service.id ? 'text-white' : 'text-tmc-red'}>
                                     {service.icon}
                                 </div>
-                                <span className={`ml-4 font-medium text-xl ${selectedService.id === service.id ? 'text-white' : 'text-tmc-black'}`}>
+                                <span className={`ml-4 font-medium text-lg md:text-xl ${selectedService.id === service.id ? 'text-white' : 'text-tmc-black'}`}>
                                     {service.name}
                                 </span>
                             </div>
-                            <p className={`mt-3 text-[15px] ${selectedService.id === service.id ? 'text-white/90' : 'text-gray-600'}`}>
+                            <p className={`mt-3 text-sm md:text-[15px] ${selectedService.id === service.id ? 'text-white/90' : 'text-gray-600'}`}>
                                 {service.shortDescription}
                             </p>
                         </motion.div>
@@ -135,7 +135,7 @@ const Services = () => {
                 </div>
 
                 {/* Service Description */}
-                <div className="w-2/3">
+                <div className="w-full lg:w-2/3">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={selectedService.id}
@@ -143,26 +143,26 @@ const Services = () => {
                             initial="hidden"
                             animate="visible"
                             exit="exit"
-                            className="bg-white p-8 rounded-xl shadow-lg"
+                            className="bg-white p-4 md:p-8 rounded-xl shadow-lg"
                         >
-                            <h2 className="text-4xl font-bold mb-6 text-tmc-red font-roboto">
+                            <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-tmc-red font-roboto">
                                 {selectedService.name}
                             </h2>
                             <motion.div 
-                                className="relative overflow-hidden rounded-xl mb-6"
+                                className="relative overflow-hidden rounded-xl mb-4 md:mb-6"
                                 whileHover={{ scale: 1.02 }}
                                 transition={{ duration: 0.3 }}
                             >
                                 <img 
                                     src={selectedService.image} 
                                     alt={selectedService.name} 
-                                    className="w-full object-cover rounded-xl shadow-md"
+                                    className="w-full h-48 md:h-64 object-cover rounded-xl shadow-md"
                                 />
                             </motion.div>
-                            <p className="text-lg text-gray-700 leading-relaxed font-roboto">
+                            <p className="text-base md:text-lg text-gray-700 leading-relaxed font-roboto">
                                 {selectedService.description}
                             </p>
-                            <div className='w-full flex items-center justify-center mt-8'>
+                            <div className='w-full flex items-center justify-center mt-6 md:mt-8'>
                                 <motion.button
                                     whileHover={{ 
                                         scale: 1.05,
@@ -171,7 +171,7 @@ const Services = () => {
                                     }}
                                     whileTap={{ scale: 0.95 }}
                                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                                    className="text-[18px] font-roboto font-bold bg-transparent border-[3px] border-tmc-red text-tmc-red px-12 py-3 rounded-lg shadow-lg hover:shadow-xl"
+                                    className="text-[16px] md:text-[18px] font-roboto font-bold bg-transparent border-[3px] border-tmc-red text-tmc-red px-8 md:px-12 py-2 md:py-3 rounded-lg shadow-lg hover:shadow-xl"
                                     onClick={handleEnquireNowClick}
                                 >
                                     Book a Consultation

@@ -85,54 +85,58 @@ const ContactHome = () => {
     };
 
     return (
-        <div className='w-full bg-tmc-red py-20'>
+        <div className='w-full bg-tmc-red py-10 md:py-20'>
             <div className='container mx-auto px-4 md:px-16'>
-                <div className='flex flex-col lg:flex-row gap-12'>
+                <div className='flex flex-col lg:flex-row gap-8 lg:gap-12'>
                     {/* Left Column - Contact Info */}
-                    <div className='w-full lg:w-1/2'>
-                    <div className='flex items-center gap-2 pb-2'>
-                        <h1 className='text-white font-roboto font-medium text-[19px]'>Contact Us</h1>
-                        <div className='h-[2px] w-6 bg-white'></div>
-                    </div>
-                        <h2 className='text-white font-roboto font-bold text-5xl'>Get In Touch</h2>
+                    <div className='w-full lg:w-1/2 space-y-8 md:space-y-14'>
+                        <div>
+                            <div className='flex items-center gap-2 pb-2'>
+                                <h1 className='text-white font-roboto font-medium text-[16px] md:text-[19px]'>Contact Us</h1>
+                                <div className='h-[2px] w-6 bg-white'></div>
+                            </div>
+                            <h2 className='text-white font-roboto font-bold text-3xl md:text-4xl lg:text-5xl'>Get In Touch</h2>
+                        </div>
                         
-                        <div className='mt-14'>
-                            <h2 className='text-tmc-black font-roboto font-bold text-3xl'>TechnoMelt Solutions</h2>
-                            <div className="h-[1px] w-3/6 bg-gradient-to-r from-tmc-red via-white to-tmc-red"></div>
+                        <div>
+                            <h2 className='text-tmc-black font-roboto font-bold text-2xl md:text-3xl'>TechnoMelt Solutions</h2>
+                            <div className="h-[1px] w-full md:w-3/6 bg-gradient-to-r from-tmc-red via-white to-tmc-red"></div>
                             
-                            <div className='mt-6 space-y-4 text-white'>
-                                <p className='font-roboto'><span className='font-bold'>Address:</span> Technomelt Solutions, Radiance Suprema, 8th Floor; Tower B, Madhavaram, Chennai, Tamil Nadu - 600060</p>
-                                <p className='font-roboto'><span className='font-bold'>Phone:</span> +91 88386 37146</p>
-                                <p className='font-roboto'><span className='font-bold'>Email:</span> info@technomeltsolutions.com</p>
+                            <div className='mt-4 md:mt-6 space-y-3 md:space-y-4 text-white'>
+                                <p className='font-roboto text-sm md:text-base'><span className='font-bold'>Address:</span> Technomelt Solutions, Radiance Suprema, 8th Floor; Tower B, Madhavaram, Chennai, Tamil Nadu - 600060</p>
+                                <p className='font-roboto text-sm md:text-base'><span className='font-bold'>Phone:</span> +91 88386 37146</p>
+                                <p className='font-roboto text-sm md:text-base'><span className='font-bold'>Email:</span> info@technomeltsolutions.com</p>
                             </div>
                         </div>
 
-                        <div className='mt-14'>
-                        <h2 className='text-tmc-black font-roboto font-bold text-3xl'>Location</h2>
-                            <div className="h-[1px] w-3/6 bg-gradient-to-r from-tmc-red via-white to-tmc-red mb-6"></div>
-                            <GoogleMap />
+                        <div>
+                            <h2 className='text-tmc-black font-roboto font-bold text-2xl md:text-3xl'>Location</h2>
+                            <div className="h-[1px] w-full md:w-3/6 bg-gradient-to-r from-tmc-red via-white to-tmc-red mb-4 md:mb-6"></div>
+                            <div className='w-full h-[250px] md:h-[300px] overflow-hidden rounded-lg'>
+                                <GoogleMap />
+                            </div>
                         </div>
                     </div>
 
                     {/* Right Column - Form */}
                     <div className='w-full lg:w-1/2'>
-                        <div className='bg-white rounded-xl p-8 md:p-12'>
-                            <h2 className='text-4xl font-bold text-center mb-10'>
-                            Fill In the <span className='text-tmc-red'>Details</span>
+                        <div className='bg-white rounded-xl p-6 md:p-8 lg:p-12'>
+                            <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-10'>
+                                Fill In the <span className='text-tmc-red'>Details</span>
                             </h2>
 
-                            <div className='space-y-6'>
+                            <div className='space-y-4 md:space-y-6'>
                                 <div>
                                     <label className='block text-gray-700 text-sm font-medium mb-2'>Name *</label>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                        className={`w-full p-3 border rounded-lg transition-all focus:outline-none focus:border-tmc-red ${errors.name ? 'border-red-500' : 'border-gray-300'}`}
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        className={`w-full p-2.5 md:p-3 border rounded-lg transition-all focus:outline-none focus:border-tmc-red ${errors.name ? 'border-red-500' : 'border-gray-300'}`}
                                         placeholder="Enter your name"
-                                />
-                                {errors.name && <p className='text-red-500 text-sm mt-1'>{errors.name}</p>}
+                                    />
+                                    {errors.name && <p className='text-red-500 text-xs md:text-sm mt-1'>{errors.name}</p>}
                                 </div>
 
                                 <div>
@@ -142,10 +146,10 @@ const ContactHome = () => {
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
-                                        className={`w-full p-3 border rounded-lg transition-all focus:outline-none focus:border-tmc-red ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
+                                        className={`w-full p-2.5 md:p-3 border rounded-lg transition-all focus:outline-none focus:border-tmc-red ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
                                         placeholder="Enter your email"
                                     />
-                                    {errors.email && <p className='text-red-500 text-sm mt-1'>{errors.email}</p>}
+                                    {errors.email && <p className='text-red-500 text-xs md:text-sm mt-1'>{errors.email}</p>}
                                 </div>
 
                                 <div>
@@ -155,10 +159,10 @@ const ContactHome = () => {
                                         name="phone"
                                         value={formData.phone}
                                         onChange={handleChange}
-                                        className={`w-full p-3 border rounded-lg transition-all focus:outline-none focus:border-tmc-red ${errors.phone ? 'border-red-500' : 'border-gray-300'}`}
+                                        className={`w-full p-2.5 md:p-3 border rounded-lg transition-all focus:outline-none focus:border-tmc-red ${errors.phone ? 'border-red-500' : 'border-gray-300'}`}
                                         placeholder="Enter your phone number"
                                     />
-                                    {errors.phone && <p className='text-red-500 text-sm mt-1'>{errors.phone}</p>}
+                                    {errors.phone && <p className='text-red-500 text-xs md:text-sm mt-1'>{errors.phone}</p>}
                                 </div>
 
                                 <div>
@@ -168,20 +172,20 @@ const ContactHome = () => {
                                         value={formData.requirements}
                                         onChange={handleChange}
                                         rows="4"
-                                        className="w-full p-3 border border-gray-300 rounded-lg transition-all focus:outline-none focus:border-tmc-red"
+                                        className="w-full p-2.5 md:p-3 border border-gray-300 rounded-lg transition-all focus:outline-none focus:border-tmc-red"
                                         placeholder="Enter your requirements"
                                     />
                                 </div>
 
-                            <motion.button
-                                onClick={handleSubmit}
-                                    className='w-full bg-tmc-red text-white py-3 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors'
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
-                            >
-                                Submit
-                            </motion.button>
-                        </div>
+                                <motion.button
+                                    onClick={handleSubmit}
+                                    className='w-full bg-tmc-red text-white py-2.5 md:py-3 rounded-lg font-bold text-base md:text-lg hover:bg-red-700 transition-colors'
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                >
+                                    Submit
+                                </motion.button>
+                            </div>
                         </div>
                     </div>
                 </div>
