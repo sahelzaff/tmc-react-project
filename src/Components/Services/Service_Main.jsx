@@ -9,10 +9,10 @@ const ServiceCard = ({ title, description }) => (
     <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+        className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
     >
-        <h3 className="text-xl font-bold text-tmc-red mb-2">{title}</h3>
-        <p className="text-gray-600 text-sm">{description}</p>
+        <h3 className="text-lg md:text-xl font-bold text-tmc-red mb-2">{title}</h3>
+        <p className="text-gray-600 text-sm md:text-base">{description}</p>
     </motion.div>
 )
 
@@ -70,21 +70,21 @@ const Service_Main = () => {
     ]
 
     return (
-        <div className='w-full h-auto py-10'>
-            <div className='px-16'>
+        <div className='w-full h-auto py-6 md:py-10'>
+            <div className='px-4 md:px-8 lg:px-16'>
                 {/* Consultant Services Section */}
-                <div className="mb-20">
-                    <div className="flex items-start gap-10 mb-12 mt-10">
-                        <div className="w-1/2">
-                            <h2 className="text-4xl font-bold text-tmc-red mb-6">Consultant Services</h2>
-                            <p className="text-gray-700 text-lg leading-relaxed">
+                <div className="mb-10 md:mb-20">
+                    <div className="flex flex-col md:flex-row items-start gap-6 md:gap-10 mb-8 md:mb-12 mt-6 md:mt-10">
+                        <div className="w-full md:w-1/2">
+                            <h2 className="text-2xl md:text-4xl font-bold text-tmc-red mb-4 md:mb-6">Consultant Services</h2>
+                            <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                                 As a leading consultancy in the industry, Technomelt Solution provides top-tier 
                                 consulting services to help you execute your projects effectively. Our team of 
                                 experts is committed to analyzing your project requirements in-depth and delivering 
                                 precise, reliable solutions that drive success.
                             </p>
                         </div>
-                        <div className="w-1/2">
+                        <div className="w-full md:w-1/2">
                             <img 
                                 src={assets.Technical_Consultant} 
                                 alt="Consulting Services" 
@@ -93,7 +93,7 @@ const Service_Main = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                         {consultingServices.map((service, index) => (
                             <ServiceCard 
                                 key={index}
@@ -105,19 +105,19 @@ const Service_Main = () => {
                 </div>
 
                 {/* Why Choose Us Section */}
-                <div className="mb-20">
-                    <h2 className="text-4xl font-bold text-tmc-red mb-8">Why Choose Us for Consulting?</h2>
-                    <div className="flex gap-10">
-                        <div className="w-1/2 bg-white p-8 rounded-lg shadow-lg">
-                            <h3 className="text-2xl font-bold text-tmc-red mb-4">Expert Consultation</h3>
-                            <p className="text-gray-700 leading-relaxed">
+                <div className="mb-10 md:mb-20">
+                    <h2 className="text-2xl md:text-4xl font-bold text-tmc-red mb-4 md:mb-8">Why Choose Us for Consulting?</h2>
+                    <div className="flex flex-col md:flex-row gap-6 md:gap-10">
+                        <div className="w-full md:w-1/2 bg-white p-4 md:p-8 rounded-lg shadow-lg">
+                            <h3 className="text-xl md:text-2xl font-bold text-tmc-red mb-4">Expert Consultation</h3>
+                            <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                                 Our team brings years of industry experience and expertise to every project.
                             </p>
                         </div>
-                        <div className="w-1/2">
-                            <ul className="space-y-4">
+                        <div className="w-full md:w-1/2">
+                            <ul className="space-y-3 md:space-y-4">
                                 {whyChooseUsPoints.map((point, index) => (
-                                    <li key={index} className="flex items-center justify-between text-gray-700 p-2 hover:bg-gray-50 rounded-lg">
+                                    <li key={index} className="flex items-center justify-between text-gray-700 p-2 hover:bg-gray-50 rounded-lg text-sm md:text-base">
                                         <span>{point}</span>
                                         <FaArrowRight className="text-tmc-red" />
                                     </li>
@@ -128,17 +128,17 @@ const Service_Main = () => {
                 </div>
 
                 {/* Manpower Supply Section */}
-                <div className="mb-20">
-                    <h2 className="text-4xl font-bold text-tmc-red mb-8">Manpower Supply</h2>
-                    <div className="flex gap-10 mb-12">
-                        <div className="w-1/2">
-                            <p className="text-gray-700 text-lg leading-relaxed">
+                <div className="mb-10 md:mb-20">
+                    <h2 className="text-2xl md:text-4xl font-bold text-tmc-red mb-4 md:mb-8">Manpower Supply</h2>
+                    <div className="flex flex-col md:flex-row gap-6 md:gap-10 mb-8 md:mb-12">
+                        <div className="w-full md:w-1/2">
+                            <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                                 We provide specialized manpower supply services tailored to the steel industry. 
                                 Our skilled professionals are equipped with the knowledge and experience needed 
                                 to support your projects, ensuring timely and effective execution of all tasks.
                             </p>
                         </div>
-                        <div className="w-1/2">
+                        <div className="w-full md:w-1/2">
                             <img 
                                 src={assets.Manpower_supply} 
                                 alt="Manpower Services" 
@@ -147,7 +147,7 @@ const Service_Main = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                         {manpowerServices.map((service, index) => (
                             <ServiceCard 
                                 key={index}
@@ -159,19 +159,19 @@ const Service_Main = () => {
                 </div>
 
                 {/* Why Choose Us for Manpower Section */}
-                <div className="mb-20">
-                    <h2 className="text-4xl font-bold text-tmc-red mb-8">Why Choose Us for Manpower?</h2>
-                    <div className="flex gap-10">
-                        <div className="w-1/2 bg-white p-8 rounded-lg shadow-lg">
-                            <h3 className="text-2xl font-bold text-tmc-red mb-4">Professional Staffing</h3>
-                            <p className="text-gray-700 leading-relaxed">
+                <div className="mb-10 md:mb-20">
+                    <h2 className="text-2xl md:text-4xl font-bold text-tmc-red mb-4 md:mb-8">Why Choose Us for Manpower?</h2>
+                    <div className="flex flex-col md:flex-row gap-6 md:gap-10">
+                        <div className="w-full md:w-1/2 bg-white p-4 md:p-8 rounded-lg shadow-lg">
+                            <h3 className="text-xl md:text-2xl font-bold text-tmc-red mb-4">Professional Staffing</h3>
+                            <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                                 We provide skilled professionals who understand your industry requirements.
                             </p>
                         </div>
-                        <div className="w-1/2">
-                            <ul className="space-y-4">
+                        <div className="w-full md:w-1/2">
+                            <ul className="space-y-3 md:space-y-4">
                                 {manpowerPoints.map((point, index) => (
-                                    <li key={index} className="flex items-center justify-between text-gray-700 p-2 hover:bg-gray-50 rounded-lg">
+                                    <li key={index} className="flex items-center justify-between text-gray-700 p-2 hover:bg-gray-50 rounded-lg text-sm md:text-base">
                                         <span>{point}</span>
                                         <FaArrowRight className="text-tmc-red" />
                                     </li>
@@ -183,15 +183,15 @@ const Service_Main = () => {
 
                 {/* Centered CTA Section */}
                 <motion.div 
-                    className="w-full mx-auto bg-tmc-red text-white p-10 rounded-lg text-center shadow-xl"
+                    className="w-full mx-auto bg-tmc-red text-white p-6 md:p-10 rounded-lg text-center shadow-xl"
                     whileHover={{ scale: 1.02 }}
                     transition={{ type: "spring", stiffness: 300 }}
                 >
-                    <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-                    <p className="text-lg mb-6">Contact us today to discuss your requirements.</p>
+                    <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">Ready to Get Started?</h2>
+                    <p className="text-base md:text-lg mb-4 md:mb-6">Contact us today to discuss your requirements.</p>
                     <Link to="/contact-us">
                         <motion.button
-                            className="bg-white text-tmc-red px-8 py-3 rounded-lg font-bold text-lg inline-flex items-center gap-2"
+                            className="bg-white text-tmc-red px-6 md:px-8 py-2 md:py-3 rounded-lg font-bold text-base md:text-lg inline-flex items-center gap-2"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
