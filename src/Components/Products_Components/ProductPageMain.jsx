@@ -13,6 +13,7 @@ const ProductPageMain = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const productsPerPage = 9;
 
     // Create a reference for the component
@@ -67,36 +68,53 @@ const ProductPageMain = () => {
     const handleCategoryChange = (categories) => {
         setSelectedCategories(categories);
         setCurrentPage(1); // Reset to first page when filter changes
+        if (window.innerWidth < 1024) {
+            setIsSidebarOpen(false); // Close sidebar on mobile after selection
+        }
     };
 
     return (
-        <div className="h-auto py-20 px-16 w-full" ref={productPageRef}>
+        <div className="h-auto py-10 md:py-20 px-4 md:px-16 w-full" ref={productPageRef}>
             <Breadcrumb items={breadcrumbItems} />
 
-            <div className="flex flex-col w-full pb-10">
+            <div className="flex flex-col w-full pb-6 md:pb-10">
                 <div className="flex items-center gap-2 pb-2">
-                    <h1 className="text-tmc-red font-roboto font-medium text-[19px]">
+                    <h1 className="text-tmc-red font-roboto font-medium text-[16px] md:text-[19px]">
                         Our Products
                     </h1>
                     <div className="h-[2px] w-6 bg-tmc-red"></div>
                 </div>
-                <p className="text-black font-roboto text-lg mb-6">
+                <p className="text-black font-roboto text-base md:text-lg mb-4 md:mb-6">
                     Explore our range of advanced Continuous Casting Machines and major equipment designed for optimal performance. 
                     <Link to="/contact-us" className="text-tmc-red hover:underline ml-1">
                         Contact us for more details.
                     </Link>
                 </p>
-                <h2 className="text-black font-roboto font-bold text-5xl mt-10">
+                <h2 className="text-black font-roboto font-bold text-3xl md:text-5xl mt-6 md:mt-10">
                     Products
                 </h2>
             </div>
             <hr className=''/>
-            <div className="flex">
-                <CategorySidebar
-                    selectedCategories={selectedCategories}
-                    onCategoryChange={handleCategoryChange}
-                />
-                <div className="w-3/4 p-4">
+
+            {/* Mobile Filter Toggle Button */}
+            <button
+                className="lg:hidden w-full bg-tmc-red text-white py-3 rounded-lg mb-4 font-roboto font-medium"
+                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            >
+                {isSidebarOpen ? 'Hide Filters' : 'Show Filters'}
+            </button>
+
+            <div className="flex flex-col lg:flex-row">
+                {/* Sidebar - Hidden on mobile by default */}
+                <div className={`lg:block ${isSidebarOpen ? 'block' : 'hidden'} w-full lg:w-1/4 mb-4 lg:mb-0`}>
+                    <CategorySidebar
+                        selectedCategories={selectedCategories}
+                        onCategoryChange={handleCategoryChange}
+                    />
+                </div>
+
+                {/* Products Grid */}
+                <div className="w-full lg:w-3/4 lg:pl-4">
                     {filteredProducts.length > 0 ? (
                         <>
                             <ProductGrid 

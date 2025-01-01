@@ -8,10 +8,11 @@ const Product_Hero = () => {
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center h-full w-full"
-        style={{ backgroundImage: `url(${assets.poster_products})` }}       />
+        style={{ backgroundImage: `url(${assets.poster_products})` }}       
+      />
 
-      {/* White Overlay */}
-      {/* <div className="absolute inset-0 bg-white opacity-60 h-full w-full"></div> */}
+      {/* Dark Overlay for Mobile */}
+      <div className="absolute inset-0 bg-black bg-opacity-50 md:bg-opacity-0 h-full w-full"></div>
 
       {/* Text on Top */}
       <div className='relative h-auto w-full'>

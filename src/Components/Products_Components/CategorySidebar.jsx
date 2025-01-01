@@ -24,65 +24,62 @@ const CategorySidebar = ({ selectedCategories, onCategoryChange }) => {
     };
 
     return (
-        <div className="w-1/4 p-4 bg-white rounded-lg shadow-sm">
-            <div className="flex items-center justify-between mb-4">
-                <h2 className="text-xl font-bold text-tmc-black">Categories</h2>
-                {selectedCategories.length > 0 && (
-                    <motion.button
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        onClick={handleClearAll}
-                        className="flex items-center gap-1 text-sm text-tmc-red hover:text-red-700 transition-colors"
-                    >
-                        <FiX className="w-4 h-4" />
-                        Clear All
-                    </motion.button>
-                )}
+        <div className="w-full bg-white rounded-lg shadow-sm">
+            {/* Hide Filters Button */}
+            <button
+                onClick={handleClearAll}
+                className="w-full bg-tmc-red text-white py-3 rounded-t-lg font-roboto font-medium hover:bg-red-700 transition-colors"
+            >
+                Hide Filters
+            </button>
+
+            {/* Categories Section */}
+            <div className="p-4">
+                <h2 className="text-xl font-bold text-tmc-black mb-4">Categories</h2>
+                
+                {Object.entries(categories).map(([key, category]) => (
+                    <div key={key} className="mb-4">
+                        <button
+                            onClick={() => toggleCategory(key)}
+                            className={`flex items-center w-full text-left py-2 transition-colors text-[15px] font-roboto
+                                ${selectedCategories[0] === key ? 
+                                    'text-tmc-red font-medium' : 
+                                    'text-gray-800 hover:text-tmc-red'}`}
+                        >
+                            {category.name}
+                            {expandedCategories[key] ? 
+                                <MdKeyboardArrowDown className="ml-auto text-xl" /> : 
+                                <MdKeyboardArrowRight className="ml-auto text-xl" />
+                            }
+                        </button>
+                        
+                        <AnimatePresence>
+                            {expandedCategories[key] && (
+                                <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: 'auto', opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="overflow-hidden"
+                                >
+                                    {category.subcategories.map((subcategory) => (
+                                        <button
+                                            key={subcategory}
+                                            onClick={() => handleSubcategoryClick(key, subcategory)}
+                                            className={`w-full text-left py-2 pl-4 text-[14px] transition-colors font-roboto
+                                                ${selectedCategories.includes(subcategory) ? 
+                                                    'text-tmc-red font-medium' : 
+                                                    'text-gray-600 hover:text-tmc-red'}`}
+                                        >
+                                            {subcategory}
+                                        </button>
+                                    ))}
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
+                ))}
             </div>
-            
-            {Object.entries(categories).map(([key, category]) => (
-                <div key={key} className="mb-4">
-                    <button
-                        onClick={() => toggleCategory(key)}
-                        className={`flex items-center justify-between w-full p-2 text-left rounded-lg transition-colors
-                            ${selectedCategories[0] === key ? 
-                                'bg-red-50 text-tmc-red' : 
-                                'hover:bg-gray-50 text-gray-800'}`}
-                    >
-                        <span className="font-medium">{category.name}</span>
-                        {expandedCategories[key] ? 
-                            <MdKeyboardArrowDown className="text-xl" /> : 
-                            <MdKeyboardArrowRight className="text-xl" />
-                        }
-                    </button>
-                    
-                    <AnimatePresence>
-                        {expandedCategories[key] && (
-                            <motion.div
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: 'auto', opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                transition={{ duration: 0.2 }}
-                                className="overflow-hidden"
-                            >
-                                {category.subcategories.map((subcategory) => (
-                                    <button
-                                        key={subcategory}
-                                        onClick={() => handleSubcategoryClick(key, subcategory)}
-                                        className={`w-full text-left p-2 pl-6 text-sm transition-colors
-                                            ${selectedCategories.includes(subcategory) ? 
-                                                'text-tmc-red font-medium bg-red-50' : 
-                                                'text-gray-600 hover:bg-gray-50'}`}
-                                    >
-                                        {subcategory}
-                                    </button>
-                                ))}
-                            </motion.div>
-                        )}
-                    </AnimatePresence>
-                </div>
-            ))}
         </div>
     );
 };

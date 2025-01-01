@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
     return (
+        <div className="w-full">
         <footer className="bg-tmc-black text-white pt-8 md:pt-12">
             <div className="container mx-auto px-4 md:px-16">
                 {/* Main Footer Content */}
@@ -108,13 +109,14 @@ const Footer = () => {
                 </div>
 
                 {/* Copyright */}
+            </div>
+        </footer>
                 <div className="bg-tmc-red text-center py-3 md:py-4">
                     <p className="text-white text-sm md:text-base">
                         Copyright 2024 TechnoMelt Solutions, All rights reserved.
                     </p>
                 </div>
-            </div>
-        </footer>
+        </div>
     );
 };
 
