@@ -10,47 +10,50 @@ const Explore_team = () => {
     ];
 
     return (
-        <div className='h-auto w-full pt-10'>
-            <div className='px-16'>
+        <div className='h-auto w-full pt-6 md:pt-10'>
+            <div className='px-4 md:px-8 lg:px-16'>
                 <Breadcrumb items={breadcrumbItems} />
-                <h2 className='font-roboto font-medium text-[18px] pb-10 pt-2 px-6 text-black'>
-                <a href=''>
-                    <Link to='/' className='hover:underline'>Home </Link>
-                
-                </a>
-                   / Explore Us</h2>
 
-                <div className='h-auto w-full pb-20'>
-
-                    <div className='flex flex-row items-center justify-center gap-10 px-6'>
-                        <div className='flex items-center justify-center w-1/2'>
-                            <img src={assets.team_image} className='h-full w-full rounded-sm ' alt="" />
+                <div className='h-auto w-full pb-10 md:pb-20'>
+                    <div className='flex flex-col lg:flex-row items-center justify-center gap-6 md:gap-10 px-0 md:px-6'>
+                        <div className='flex items-center justify-center w-full lg:w-1/2'>
+                            <img src={assets.team_image} className='h-full w-full rounded-sm' alt="Team" />
                         </div>
 
-                        <div className='flex flex-col items-center justify-start w-1/2'>
-                            <div>
-                                <h1 className='font-roboto font-extrabold text-tmc-red text-4xl'>Detailed Introduction About Your Company:</h1>
-                                <p className='font-roboto text-sm py-3 text-black font-normal'>We are a leading provider of Continuous Casting Machines and related equipment, committed to delivering high-quality products and exceptional services. Our team of experts is dedicated to ensuring your operations run smoothly and efficiently.</p>
+                        <div className='flex flex-col items-start lg:items-center justify-start w-full lg:w-1/2 mt-6 lg:mt-0'>
+                            <div className='w-full'>
+                                <h1 className='font-roboto font-extrabold text-tmc-red text-2xl md:text-3xl lg:text-4xl'>
+                                    Detailed Introduction About Your Company:
+                                </h1>
+                                <p className='font-roboto text-sm md:text-base py-3 text-black font-normal'>
+                                    We are a leading provider of Continuous Casting Machines and related equipment, committed to delivering high-quality products and exceptional services. Our team of experts is dedicated to ensuring your operations run smoothly and efficiently.
+                                </p>
                             </div>
-                            <div>
-                                <h1 className='font-roboto font-extrabold text-tmc-red text-4xl'>Mission and Vision Section:</h1>
-                                <h2 className='font-roboto text-sm py-3 text-black font-normal pb-1'><span className='font-extrabold text-tmc-red text-xl'>Company mission statement:</span> To provide top-quality machinery and expert consulting services that drive efficiency and innovation in the casting industry.
-                                </h2>
-                                <h2 className='font-roboto text-sm py-3 text-black font-normal'><span className='font-extrabold text-tmc-red text-xl'>Company vision:</span> To be the global leader in continuous casting solutions, recognized for our quality, innovation, and customer-centric approach.
-                                </h2>
+                            <div className='w-full mt-4 md:mt-6'>
+                                <h1 className='font-roboto font-extrabold text-tmc-red text-2xl md:text-3xl lg:text-4xl'>
+                                    Mission and Vision Section:
+                                </h1>
+                                <div className='space-y-4 md:space-y-6'>
+                                    <div>
+                                        <h2 className='font-roboto text-sm md:text-base text-black font-normal'>
+                                            <span className='font-extrabold text-tmc-red text-lg md:text-xl block mb-2'>
+                                                Company mission statement:
+                                            </span>
+                                            To provide top-quality machinery and expert consulting services that drive efficiency and innovation in the casting industry.
+                                        </h2>
+                                    </div>
+                                    <div>
+                                        <h2 className='font-roboto text-sm md:text-base text-black font-normal'>
+                                            <span className='font-extrabold text-tmc-red text-lg md:text-xl block mb-2'>
+                                                Company vision:
+                                            </span>
+                                            To be the global leader in continuous casting solutions, recognized for our quality, innovation, and customer-centric approach.
+                                        </h2>
+                                    </div>
+                                </div>
                             </div>
-                            {/* <button
-                            type="button"
-                            className="bg-tmc-red border-[3px] border-tmc-red text-white px-8 rounded-lg py-2 text-[20px] font-bold my-10 hover:bg-tmc-red hover:translate-y-[-2px] transition-transform duration-300 ease-in-out"
-                            
-                        >Contact Us</button> */}
                         </div>
-
-
-
                     </div>
-
-
                 </div>
             </div>
         </div>

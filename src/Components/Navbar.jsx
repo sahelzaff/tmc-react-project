@@ -60,7 +60,7 @@ const Navbar = () => {
                         <li className={getNavItemClasses('/products')}><Link to="/products">PRODUCTS</Link></li>
                         <li className={getNavItemClasses('/consultant')}><Link to='/consultant'>CONSULTANT</Link></li>
                         <li className={getNavItemClasses('/services')}><Link to='/services'>SERVICES</Link></li> 
-                        <li className={getNavItemClasses('/about-us')}><Link to='/about-us'>ABOUT US</Link></li>
+                        <li className={getNavItemClasses('/about-us')}><Link to='/about-us'>EXPLORE US</Link></li>
                         <li className={getNavItemClasses('/contact-us')}><Link to="/contact-us">CONTACT US</Link></li>
                     </ul>
                 </div>
