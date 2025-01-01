@@ -126,7 +126,10 @@ const Navbar = () => {
                             </div>
 
                             {/* Mobile Menu Items */}
-                            <ul className="flex flex-col gap-4 p-6">
+                            <div className="px-6 pb-4">
+                                <h2 className="text-2xl font-bold text-tmc-red mb-6">Menu</h2>
+                            </div>
+                            <ul className="flex flex-col gap-4 p-6 pt-0">
                                 <li className={`${getNavItemClasses('/')} mobile-nav-item`}>
                                     <Link to="/" onClick={toggleMobileMenu}>HOME</Link>
                                 </li>
@@ -140,7 +143,7 @@ const Navbar = () => {
                                     <Link to="/services" onClick={toggleMobileMenu}>SERVICES</Link>
                                 </li>
                                 <li className={`${getNavItemClasses('/about-us')} mobile-nav-item`}>
-                                    <Link to="/about-us" onClick={toggleMobileMenu}>ABOUT US</Link>
+                                    <Link to="/about-us" onClick={toggleMobileMenu}>EXPLORE US</Link>
                                 </li>
                                 <li className={`${getNavItemClasses('/contact-us')} mobile-nav-item`}>
                                     <Link to="/contact-us" onClick={toggleMobileMenu}>CONTACT US</Link>
