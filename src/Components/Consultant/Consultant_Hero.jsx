@@ -8,6 +8,8 @@ const Consultant_Hero = () => {
         className="absolute inset-0 bg-cover bg-center h-full w-full"
         style={{ backgroundImage: `url(${assets.poster_explore})` }}
       />
+      {/* Dark Overlay for Mobile */}
+      <div className="absolute inset-0 bg-black bg-opacity-50 md:bg-opacity-0 h-full w-full"></div>
       <div className="relative flex flex-col items-start justify-center h-full w-full">
         <h1 className="text-4xl font-bold text-white font-roboto w-96 text-center">
           Expert Consulting Services
